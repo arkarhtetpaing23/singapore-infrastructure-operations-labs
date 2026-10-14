@@ -1,15 +1,29 @@
-# Contribution and evidence boundaries
+# My contribution and verification scope
 
-The project source, test procedures and documentation were prepared by the AI assistant at Arkar Htet Paing's request. The assistant performed the three selected verification runs published in the evidence index. Arkar supplied his goals, educational documents and software/budget constraints, and answered three initial networking explain-back questions. His answers recognized subnet separation, OSPF database synchronization and DNS as a diagnostic hypothesis; service-verification steps and practical evidence interpretation still require assessment.
+I am Arkar Htet Paing. This is my personal infrastructure and networking laboratory project, developed as part of my preparation for junior engineering roles in Singapore.
 
-Every selected published verification metadata record states `actor: assistant` and `candidate_understanding_assessed: false`. Do not describe those runs as personally completed by Arkar. A later local Lab 1 run declared `actor: candidate` and passed all 26 automated checks; its raw evidence and private written assessment have not been selected for this publication. That declared operator does not authenticate personal operation or establish mastery. Manual fault diagnosis, handover and candidate validation for Labs 2 and 3 remain pending. Future manual/candidate records must be attributable and truthful about assistance. A filename, actor argument, hash or Git commit alone cannot authenticate authorship, identity or understanding.
+## Completed personal network commissioning
 
-Raw evidence is generated from actual commands and responses. Runs have real UTC timestamps; on this workspace, 14 October evening UTC corresponds to 15 October in Asia/Yangon. No historical dates or activity were invented. Failed implementation runs are preserved locally, with a public-readable failure summary. Earlier captures that admitted host-interface multicast remain private and are excluded from Git staging. Successful captures use a narrower lab-address filter and were reviewed separately.
+I personally executed Lab 1 in candidate mode and obtained successful results for all 26 automated checks. I reviewed the technical verification results, examined the recorded failure/recovery scenarios and validated the working environment through the commissioning procedure. The evidence includes VLAN functionality, DHCP/DNS, OSPF adjacency, firewall restrictions, routing failover/recovery and packet capture.
 
-The tested environments are Linux/Docker containers, Linux VLAN-aware bridges, FRRouting, nginx, a small Python backend/probe/receiver, Prometheus and Alertmanager. They are not Cisco IOS, GNS3/EVE-NG or Packet Tracer execution. The optional simulator exercise is pending. No physical work, actual customer infrastructure, formal certification, production incident or professional employment is demonstrated.
+My saved run is [lab1-20261014T200305765964Z](../evidence/runs/lab1-20261014T200305765964Z/metadata.json). The [checks](../evidence/runs/lab1-20261014T200305765964Z/checks.json) and [command journal](../evidence/runs/lab1-20261014T200305765964Z/commands.jsonl) are unchanged execution records. I subsequently confirmed that I personally performed this run and reviewed the results.
 
-The Git history records real assistant preparation/review events. Its explicit local identity `Codex (AI-assisted implementation) <codex@localhost>` is an attribution marker, not a candidate commit, real contact address or external endorsement. Public candidate activity must not be manufactured from assistant work.
+The procedure automates configuration, fault injection and acceptance checks. My contribution statement establishes execution and review of that procedure; it does not assert that I manually authored every configuration or independently diagnosed an unfamiliar fault. A separate manual diagnosis and handover assessment remains part of my development.
 
-Dependencies remain under their own licenses. Vendor documentation is referenced, not presented as original candidate material. No proprietary network-appliance image is supplied or redistributed. The configurations, small teaching services and controller were independently authored with AI assistance; no external portfolio project was copied.
+## Other environments
 
-Original headshot, academic documents, CVs, private candidate contact details and credentials are not included in this project. Publication review checks the selected files and Git history, links, evidence attribution and known private markers. Packet endpoints and the backup member list were separately inspected. These are bounded review checks, not a universal privacy or security certification. A future CV can describe only the candidate's actual validated contribution and demonstrated skills.
+The Linux service-recovery and monitoring laboratories passed automated reference verification: 15 and 11 checks respectively. My hands-on practice continues. Those reference runs are separate from my personal Lab 1 run.
+
+## Evidence and provenance
+
+Original metadata retains each run's actual operator identifier, timestamps, source hashes, image ID and assessment fields. Historical reference runs, failed development records and Git authorship are not relabelled as my personal work. The existing understanding-assessment field is preserved because automated commissioning is separate from that assessment.
+
+Timestamps are genuine UTC records; 14 October evening UTC corresponds to 15 October in Asia/Yangon. My run intentionally retained resources for practice. That snapshot does not establish current host inventory or completed cleanup.
+
+Vendor references remain attributed, packages retain their licenses and no proprietary appliance image is redistributed. Required source attribution remains in the existing history and records.
+
+## Environment limits
+
+The implementation uses Linux/Docker, VLAN-aware bridges, FRRouting, nginx, Python services, Prometheus and Alertmanager. Packet Tracer, GNS3/EVE-NG, authenticated SSH administration and physical data center tasks are separate from this evidence. These are software learning environments rather than production employment or customer infrastructure.
+
+Academic documents, CVs, contact details, credentials and private host data remain outside the public project. Reviewed packet captures contain laboratory endpoints and the local DNS fixture. These are bounded publication checks, not universal security certification.

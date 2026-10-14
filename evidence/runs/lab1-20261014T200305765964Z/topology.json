@@ -1,0 +1,107 @@
+{
+  "links": {
+    "client": [
+      "c20",
+      "sw1"
+    ],
+    "management": [
+      "m10",
+      "sw1"
+    ],
+    "trunk": [
+      "sw1",
+      "sw2"
+    ],
+    "gateway": [
+      "sw2",
+      "r1"
+    ],
+    "r12": [
+      "r1",
+      "r2"
+    ],
+    "r13": [
+      "r1",
+      "r3"
+    ],
+    "r23": [
+      "r2",
+      "r3"
+    ],
+    "server": [
+      "r2",
+      "srv"
+    ]
+  },
+  "interfaces": {
+    "c20/client": {
+      "name": "lan",
+      "address": null
+    },
+    "m10/management": {
+      "name": "lan",
+      "address": "10.10.0.50/24"
+    },
+    "sw1/client": {
+      "name": "p-client",
+      "address": null
+    },
+    "sw1/management": {
+      "name": "p-mgmt",
+      "address": null
+    },
+    "sw1/trunk": {
+      "name": "p-trunk",
+      "address": null
+    },
+    "sw2/trunk": {
+      "name": "p-trunk",
+      "address": null
+    },
+    "sw2/gateway": {
+      "name": "p-gw",
+      "address": null
+    },
+    "r1/gateway": {
+      "name": "lan",
+      "address": null
+    },
+    "r1/r12": {
+      "name": "p-r2",
+      "address": "10.255.12.1/30"
+    },
+    "r2/r12": {
+      "name": "p-r1",
+      "address": "10.255.12.2/30"
+    },
+    "r1/r13": {
+      "name": "p-r3",
+      "address": "10.255.13.1/30"
+    },
+    "r3/r13": {
+      "name": "p-r1",
+      "address": "10.255.13.2/30"
+    },
+    "r2/r23": {
+      "name": "p-r3",
+      "address": "10.255.23.1/30"
+    },
+    "r3/r23": {
+      "name": "p-r2",
+      "address": "10.255.23.2/30"
+    },
+    "r2/server": {
+      "name": "lan",
+      "address": "10.30.0.1/24"
+    },
+    "srv/server": {
+      "name": "lan",
+      "address": "10.30.0.10/24"
+    }
+  },
+  "vlans": {
+    "10": "management",
+    "20": "client"
+  },
+  "service": "10.30.0.10"
+}

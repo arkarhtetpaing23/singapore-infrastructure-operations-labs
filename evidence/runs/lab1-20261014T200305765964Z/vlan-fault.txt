@@ -1,0 +1,5 @@
+port              vlan-id  
+p-trunk           10
+p-gw              10
+                  20
+br0               1 PVID Egress Untagged

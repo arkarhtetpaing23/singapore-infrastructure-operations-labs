@@ -18,7 +18,7 @@ The probe exporter requests the actual service and checks its response. It emits
 ## Run and read
 
 ```sh
-python3 scripts/labctl.py lab3 --actor assistant
+python3 scripts/labctl.py lab3 --actor candidate
 ```
 
 Dependencies are in the shared image. See [runner](../../scripts/lab3.py), [Prometheus config](../../configs/lab3/prometheus.yml), [rules](../../configs/lab3/rules.yml), [Alertmanager route](../../configs/lab3/alertmanager.yml), [real probe](../../runtime/probe_exporter.py) and [receiver](../../runtime/alert_receiver.py).
@@ -47,4 +47,4 @@ The [fictional rack/work-order fixture](../../configs/lab3/tabletop.json) is che
 
 Two labelled PDU feeds do not establish independent upstream power or measured redundancy. UPS/PDU/cooling incidents require authorized site procedures and appropriate facilities escalation; no switching or electrical maintenance occurs here.
 
-References: [Prometheus alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/), [rule tests](https://prometheus.io/docs/prometheus/latest/configuration/unit_testing_rules/), [Alertmanager configuration](https://prometheus.io/docs/alerting/latest/configuration/). Actual candidate handover and diagnosis are separate from assistant execution.
+References: [Prometheus alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/), [rule tests](https://prometheus.io/docs/prometheus/latest/configuration/unit_testing_rules/), [Alertmanager configuration](https://prometheus.io/docs/alerting/latest/configuration/). My personal handover and diagnosis practice is separate from automated reference verification.

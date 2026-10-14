@@ -19,7 +19,7 @@ The frontend serves `/data.json`, proxies `/health`, and proxies POST `/events` 
 ## Run
 
 ```sh
-python3 scripts/labctl.py lab2 --actor assistant
+python3 scripts/labctl.py lab2 --actor candidate
 ```
 
 The shared image must be built first. [Runner](../../scripts/lab2.py), [startup supervisor](../../runtime/service_supervisor.py), [backend](../../runtime/service_backend.py) and [nginx configuration](../../runtime/nginx-service.conf) are readable source. Candidate practice uses the separate [guide](../../docs/CANDIDATE_PRACTICE.md).
@@ -44,4 +44,4 @@ This is a Linux container service exercise. No systemd boot, VM boot, RAID rebui
 
 Operations discipline: state the rollback trigger, validate config before restart, collect evidence before repair, verify the client path, and record what remains degraded. Actual candidate diagnosis/communication remains separately assessed.
 
-References: [nginx command-line/configuration control](https://nginx.org/en/docs/switches.html), [nginx beginner guide](https://nginx.org/en/docs/beginners_guide.html). Source is AI-assisted; it is not a record of commercial maintenance.
+References: [nginx command-line/configuration control](https://nginx.org/en/docs/switches.html), [nginx beginner guide](https://nginx.org/en/docs/beginners_guide.html). This is a software recovery exercise; source provenance and dependency attribution are preserved.

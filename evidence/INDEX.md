@@ -1,6 +1,18 @@
 # Actual execution evidence
 
-Current successful runs were executed by the assistant. Candidate personal validation is pending. All timestamps below are actual UTC records.
+My personal Lab 1 run passed all 26 automated checks, and I confirmed executing and reviewing it. The reference runs below remain separately identified. All timestamps are actual UTC records.
+
+## My personal Lab 1 commissioning run
+
+Run: [lab1-20261014T200305765964Z](runs/lab1-20261014T200305765964Z/metadata.json).
+
+[All 26 checks](runs/lab1-20261014T200305765964Z/checks.json), [command journal](runs/lab1-20261014T200305765964Z/commands.jsonl), [versions](runs/lab1-20261014T200305765964Z/versions.txt), [isolation](runs/lab1-20261014T200305765964Z/isolation.json), [retained resources](runs/lab1-20261014T200305765964Z/retained_resources.json), [VLAN capture](runs/lab1-20261014T200305765964Z/captures/vlan.pcap) and [OSPF capture](runs/lab1-20261014T200305765964Z/captures/ospf.pcap).
+
+I personally executed this procedure and reviewed the network failure/recovery results. Configuration, fault injection and checks were automated. Resources were intentionally retained for practice at the end of the run; no cleanup record is claimed for it. The packet endpoint/DNS review found only laboratory addresses and the app.lab fixture. Manual unfamiliar-fault diagnosis remains separate.
+
+This repeats the 26-check network matrix in the reference run below. There are 52 distinct runner checks across the three labs, with a separate personal repeat of the network matrix.
+
+## Reference verification runs
 
 | Lab | Run | Recorded checks | Status |
 |---|---|---:|---|

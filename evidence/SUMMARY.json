@@ -100,16 +100,27 @@
     }
   ],
   "limitations": [
-    "Selected published verification runs were assistant-executed; candidate practical validation remains pending",
+    "Reference verification and personal commissioning are separately identified; manual assessment and Labs 2/3 practice remain pending",
     "Packet Tracer execution pending",
     "No physical hardware or production experience",
     "Publication verification is recorded separately; this summary describes selected execution evidence"
   ],
-  "selected_run_scope": "Three assistant-executed baseline verification runs; excludes later local candidate-declared repeats",
+  "selected_run_scope": "Three automated reference verification runs; separately listed personal repeat of the network matrix",
   "candidate_progress": {
-    "initial_networking_written_review": "Core concepts recognized; requested service verification and practical interpretation remain pending",
-    "local_candidate_declared_lab1_automation": "26 checks passed; raw run not selected for public release; operator declaration is not authentication",
+    "initial_networking_written_review": "Core concepts reviewed; subsequent candidate confirmation covers commissioning execution and result review; unfamiliar-fault assessment pending",
+    "local_candidate_declared_lab1_automation": "26 checks passed; candidate subsequently confirmed personal execution and review; unchanged raw evidence selected for review",
     "manual_diagnosis_and_handover": "pending",
     "lab2_and_lab3_candidate_validation": "pending"
+  },
+  "personal_network_run": {
+    "run": "lab1-20261014T200305765964Z",
+    "actor": "candidate",
+    "status": "passed",
+    "checks": 26,
+    "candidate_execution_confirmed": true,
+    "candidate_result_review_confirmed": true,
+    "fault_injection_and_checks": "automated",
+    "manual_unknown_fault_assessment": "pending",
+    "resources_retained": true
   }
 }

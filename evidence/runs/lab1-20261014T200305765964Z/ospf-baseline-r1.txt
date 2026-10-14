@@ -1,0 +1,67 @@
+
+Neighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL
+10.255.0.2        1 Full/-          11.065s            3.368s 10.255.12.2     p-r2:10.255.12.1                     2     0     0
+10.255.0.3        1 Full/-          11.065s            3.745s 10.255.13.2     p-r3:10.255.13.1                     0     0     0
+
+Codes: K - kernel route, C - connected, S - static, R - RIP,
+       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,
+       f - OpenFabric,
+       > - selected route, * - FIB route, q - queued, r - rejected, b - backup
+       t - trapped, o - offload failure
+
+O   10.10.0.0/24 [110/10] is directly connected, lan.10, weight 1, 00:00:12
+C>* 10.10.0.0/24 is directly connected, lan.10, 00:00:12
+O   10.20.0.0/24 [110/10] is directly connected, lan.20, weight 1, 00:00:12
+C>* 10.20.0.0/24 is directly connected, lan.20, 00:00:12
+O>* 10.30.0.0/24 [110/20] via 10.255.12.2, p-r2, weight 1, 00:00:06
+O   10.255.12.0/30 [110/10] is directly connected, p-r2, weight 1, 00:00:12
+C>* 10.255.12.0/30 is directly connected, p-r2, 00:00:12
+O   10.255.13.0/30 [110/50] is directly connected, p-r3, weight 1, 00:00:12
+C>* 10.255.13.0/30 is directly connected, p-r3, 00:00:12
+O>* 10.255.23.0/30 [110/20] via 10.255.12.2, p-r2, weight 1, 00:00:06
+lan.10 is up
+  ifindex 5, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 10.10.0.1/24, Broadcast 10.10.0.255, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 10.255.0.1, Network Type BROADCAST, Cost: 10
+  Transmit Delay is 1 sec, State Waiting, Priority 1
+  No backup designated router on this network
+  Multicast group memberships: <None>
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    No Hellos (Passive interface)
+  Neighbor Count is 0, Adjacent neighbor count is 0
+lan.20 is up
+  ifindex 6, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 10.20.0.1/24, Broadcast 10.20.0.255, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 10.255.0.1, Network Type BROADCAST, Cost: 10
+  Transmit Delay is 1 sec, State Waiting, Priority 1
+  No backup designated router on this network
+  Multicast group memberships: <None>
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    No Hellos (Passive interface)
+  Neighbor Count is 0, Adjacent neighbor count is 0
+p-r2 is up
+  ifindex 3, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 10.255.12.1/30, Broadcast 10.255.12.3, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 10.255.0.1, Network Type POINTOPOINT, Cost: 10
+  Transmit Delay is 1 sec, State Point-To-Point, Priority 1
+  No backup designated router on this network
+  Multicast group memberships: OSPFAllRouters
+  Timer intervals configured, Hello 1s, Dead 4s, Wait 4s, Retransmit 5
+    Hello due in 0.933s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+p-r3 is up
+  ifindex 4, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>
+  Internet Address 10.255.13.1/30, Broadcast 10.255.13.3, Area 0.0.0.0
+  MTU mismatch detection: enabled
+  Router ID 10.255.0.1, Network Type POINTOPOINT, Cost: 50
+  Transmit Delay is 1 sec, State Point-To-Point, Priority 1
+  No backup designated router on this network
+  Multicast group memberships: OSPFAllRouters
+  Timer intervals configured, Hello 1s, Dead 4s, Wait 4s, Retransmit 5
+    Hello due in 0.933s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+

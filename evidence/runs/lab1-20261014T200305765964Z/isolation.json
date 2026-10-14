@@ -1,0 +1,149 @@
+[
+  {
+    "node": "c20",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab1-305765964z-client",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": [
+      "CAP_NET_ADMIN",
+      "CAP_NET_RAW"
+    ]
+  },
+  {
+    "node": "m10",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab1-305765964z-management",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": [
+      "CAP_NET_ADMIN",
+      "CAP_NET_RAW"
+    ]
+  },
+  {
+    "node": "sw1",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab1-305765964z-client",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": [
+      "CAP_NET_ADMIN",
+      "CAP_NET_RAW"
+    ]
+  },
+  {
+    "node": "sw2",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab1-305765964z-trunk",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": [
+      "CAP_NET_ADMIN",
+      "CAP_NET_RAW"
+    ]
+  },
+  {
+    "node": "r1",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab1-305765964z-gateway",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": [
+      "CAP_NET_ADMIN",
+      "CAP_NET_RAW",
+      "CAP_SYS_ADMIN"
+    ]
+  },
+  {
+    "node": "r2",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab1-305765964z-r12",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": [
+      "CAP_NET_ADMIN",
+      "CAP_NET_RAW",
+      "CAP_SYS_ADMIN"
+    ]
+  },
+  {
+    "node": "r3",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab1-305765964z-r13",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": [
+      "CAP_NET_ADMIN",
+      "CAP_NET_RAW",
+      "CAP_SYS_ADMIN"
+    ]
+  },
+  {
+    "node": "srv",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab1-305765964z-server",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": [
+      "CAP_NET_ADMIN",
+      "CAP_NET_RAW"
+    ]
+  },
+  {
+    "network": "client",
+    "safe": true,
+    "internal": true
+  },
+  {
+    "network": "management",
+    "safe": true,
+    "internal": true
+  },
+  {
+    "network": "trunk",
+    "safe": true,
+    "internal": true
+  },
+  {
+    "network": "gateway",
+    "safe": true,
+    "internal": true
+  },
+  {
+    "network": "r12",
+    "safe": true,
+    "internal": true
+  },
+  {
+    "network": "r13",
+    "safe": true,
+    "internal": true
+  },
+  {
+    "network": "r23",
+    "safe": true,
+    "internal": true
+  },
+  {
+    "network": "server",
+    "safe": true,
+    "internal": true
+  }
+]

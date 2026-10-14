@@ -2,7 +2,7 @@
 
 Arkar reports that he needs to create a Cisco Networking Academy account. Packet Tracer was not found in the workspace checks. This document is an exercise specification and configuration starting point; no `.pkt` file, screenshot, successful simulator result or candidate execution is claimed.
 
-Use [Cisco's official download instructions](https://www.netacad.com/skillsforall/files/Cisco_Packet_Tracer_Download_and_Installation_Instructions.pdf) and [official downloads page](https://www.netacad.com/resources/lab-downloads). Create your own account and sign in privately. Do not share passwords or verification codes with the assistant. The installer and GUI launch must be verified on your actual operating system.
+Use [Cisco's official download instructions](https://www.netacad.com/skillsforall/files/Cisco_Packet_Tracer_Download_and_Installation_Instructions.pdf) and [official downloads page](https://www.netacad.com/resources/lab-downloads). Create your own account and sign in privately. Keep passwords and verification codes private. The installer and GUI launch must be verified on your actual operating system.
 
 ## Small initial topology
 

@@ -1,0 +1,22 @@
+{
+  "nodes": {
+    "c20": "adcn-lab1-305765964z-c20",
+    "m10": "adcn-lab1-305765964z-m10",
+    "sw1": "adcn-lab1-305765964z-sw1",
+    "sw2": "adcn-lab1-305765964z-sw2",
+    "r1": "adcn-lab1-305765964z-r1",
+    "r2": "adcn-lab1-305765964z-r2",
+    "r3": "adcn-lab1-305765964z-r3",
+    "srv": "adcn-lab1-305765964z-srv"
+  },
+  "networks": {
+    "client": "adcn-lab1-305765964z-client",
+    "management": "adcn-lab1-305765964z-management",
+    "trunk": "adcn-lab1-305765964z-trunk",
+    "gateway": "adcn-lab1-305765964z-gateway",
+    "r12": "adcn-lab1-305765964z-r12",
+    "r13": "adcn-lab1-305765964z-r13",
+    "r23": "adcn-lab1-305765964z-r23",
+    "server": "adcn-lab1-305765964z-server"
+  }
+}

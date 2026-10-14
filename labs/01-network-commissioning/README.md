@@ -37,7 +37,7 @@ From the project root:
 
 ```sh
 python3 scripts/labctl.py build
-python3 scripts/labctl.py lab1 --actor assistant
+python3 scripts/labctl.py lab1 --actor candidate
 ```
 
 For your own practice use the [candidate guide](../../docs/CANDIDATE_PRACTICE.md), `--actor candidate` and `--keep`. Read the shared Docker capability/isolation disclosure first. FRR uses separate daemon configuration files and explicit daemon starts; systemd/watchfrr operations are not tested.
@@ -62,4 +62,4 @@ Before changing a real network, identify the asset/interface, scope and rollback
 
 No physical cabling, transceiver handling, commercial appliance, production network, Cisco IOS execution or authenticated SSH administration is established. Packet Tracer practice remains separately pending in [its exercise](../../docs/PACKET_TRACER_EXERCISE.md). Platform versions and results must remain distinct.
 
-References: [Linux Ethernet bridge](https://docs.kernel.org/networking/bridge.html), [FRR 8.4 setup](https://docs.frrouting.org/en/stable-8.4/setup.html), [FRR OSPF](https://docs.frrouting.org/en/stable-8.4/ospfd.html), [Cisco VLAN trunk concepts](https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/lyr2-fwd/vlan/vlan-configuration-guide/configure-vlan-trunks.html). Independently implemented with AI assistance; no external lab project copied.
+References: [Linux Ethernet bridge](https://docs.kernel.org/networking/bridge.html), [FRR 8.4 setup](https://docs.frrouting.org/en/stable-8.4/setup.html), [FRR OSPF](https://docs.frrouting.org/en/stable-8.4/ospfd.html), [Cisco VLAN trunk concepts](https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/lyr2-fwd/vlan/vlan-configuration-guide/configure-vlan-trunks.html). Source provenance and required attribution remain in the original records and history; vendor references are credited.

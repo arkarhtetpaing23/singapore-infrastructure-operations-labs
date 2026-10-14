@@ -1,6 +1,6 @@
 # Personal practice and interview evidence
 
-Current status: candidate execution and understanding have not been verified for these new projects. Assistant runs are useful implementation evidence, not evidence that Arkar personally operated the environment.
+Current status: I personally executed and reviewed Lab 1, which passed 26 automated checks. My hands-on practice with Labs 2 and 3 continues. Manual changed-fault diagnosis and handover are separate practice requirements.
 
 ## Start with one project
 
@@ -12,7 +12,7 @@ Open a terminal in this project folder. Inspect `Dockerfile`, `scripts/labctl.py
 python3 scripts/labctl.py lab1 --actor candidate --keep
 ```
 
-Record the printed `EVIDENCE` directory. Substitute that actual relative directory for `RUN_DIR` in the examples. Do not use an assistant run that was already cleaned. The actor switch records your declaration; it does not prove identity or mastery. No score or competency is automatically awarded for launching the script.
+Record the printed `EVIDENCE` directory. Substitute that actual relative directory for `RUN_DIR` in the examples. Use a retained personal run rather than a cleaned reference run. The actor switch records your declaration; it does not prove identity or mastery. No score or competency is automatically awarded for launching the script.
 
 ```sh
 python3 scripts/practice.py list --run RUN_DIR
@@ -43,7 +43,7 @@ python3 scripts/practice.py exec --run RUN_DIR --node sw2 --command 'bridge vlan
 python3 scripts/practice.py exec --run RUN_DIR --node c20 --command 'curl --noproxy "*" -fsS http://app.lab/'
 ```
 
-Changed-fault challenge: another authorized person selects a wrong route, an access-port VLAN or an OSPF area fault inside this retained lab without giving you the correction command. State the observed impact, list competing causes, choose a discriminating check, repair the evidenced fault and show restoration. The mentor must record which fault was used and the assistance required; do not claim unaided diagnosis from the guided example alone.
+Changed-fault challenge: another authorized person selects a wrong route, an access-port VLAN or an OSPF area fault inside this retained lab without giving you the correction command. State the observed impact, list competing causes, choose a discriminating check, repair the evidenced fault and show restoration. The mentor must record which fault was used and the assistance required; record the assistance used and distinguish guided practice from unfamiliar-fault diagnosis.
 
 ## Lab 2 — change and recovery
 

@@ -1,0 +1,177 @@
+Oct 14 20:03:17 dnsmasq[112]: started, version 2.90 cachesize 150
+Oct 14 20:03:17 dnsmasq[112]: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua TFTP conntrack ipset nftset auth cryptohash DNSSEC loop-detect inotify dumpfile
+Oct 14 20:03:17 dnsmasq[112]: warning: no upstream servers configured
+Oct 14 20:03:17 dnsmasq-dhcp[112]: DHCP, IP range 10.20.0.50 -- 10.20.0.60, lease time 5m
+Oct 14 20:03:17 dnsmasq-dhcp[112]: DHCP, sockets bound exclusively to interface lan.20
+Oct 14 20:03:17 dnsmasq[112]: cleared cache
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 available DHCP range: 10.20.0.50 -- 10.20.0.60
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 client provides name: c20
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 DHCPDISCOVER(lan.20) 62:7c:20:33:15:78 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 tags: known, lan.20
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 DHCPOFFER(lan.20) 10.20.0.50 62:7c:20:33:15:78 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 requested options: 1:netmask, 28:broadcast, 2:time-offset, 3:router, 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 requested options: 15:domain-name, 6:dns-server, 119:domain-search, 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 requested options: 12:hostname, 44:netbios-ns, 47:netbios-scope, 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 requested options: 26:mtu, 121:classless-static-route, 42:ntp-server
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 next server: 10.20.0.1
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  1 option: 53 message-type  2
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 54 server-identifier  10.20.0.1
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 51 lease-time  5m
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 58 T1  2m30s
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 59 T2  4m22s
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option:  1 netmask  255.255.255.0
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 28 broadcast  10.20.0.255
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option:  6 dns-server  10.20.0.1
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option:  3 router  10.20.0.1
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 available DHCP range: 10.20.0.50 -- 10.20.0.60
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 client provides name: c20
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 DHCPREQUEST(lan.20) 10.20.0.50 62:7c:20:33:15:78 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 tags: known, lan.20
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 DHCPACK(lan.20) 10.20.0.50 62:7c:20:33:15:78 c20
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 requested options: 1:netmask, 28:broadcast, 2:time-offset, 3:router, 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 requested options: 15:domain-name, 6:dns-server, 119:domain-search, 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 requested options: 12:hostname, 44:netbios-ns, 47:netbios-scope, 
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 requested options: 26:mtu, 121:classless-static-route, 42:ntp-server
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 next server: 10.20.0.1
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  1 option: 53 message-type  5
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 54 server-identifier  10.20.0.1
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 51 lease-time  5m
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 58 T1  2m30s
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 59 T2  4m22s
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option:  1 netmask  255.255.255.0
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option: 28 broadcast  10.20.0.255
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  3 option: 12 hostname  c20
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option:  6 dns-server  10.20.0.1
+Oct 14 20:03:17 dnsmasq-dhcp[112]: 1985305357 sent size:  4 option:  3 router  10.20.0.1
+Oct 14 20:03:18 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:18 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:18 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:18 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:18 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:18 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:18 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:18 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:18 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:18 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:18 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:18 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:26 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:26 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:26 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:26 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:27 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:27 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:27 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:27 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:29 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:29 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:29 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:29 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:31 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:31 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:31 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:31 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:31 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:31 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:31 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:31 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:33 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:33 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:33 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:33 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:33 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:33 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:33 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:33 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:35 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:35 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:35 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:35 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:35 dnsmasq[112]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:35 dnsmasq[112]: config app.lab is 10.30.0.10
+Oct 14 20:03:35 dnsmasq[112]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:35 dnsmasq[112]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:35 dnsmasq[112]: exiting on receipt of SIGTERM
+Oct 14 20:03:35 dnsmasq[313]: started, version 2.90 cachesize 150
+Oct 14 20:03:35 dnsmasq[313]: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua TFTP conntrack ipset nftset auth cryptohash DNSSEC loop-detect inotify dumpfile
+Oct 14 20:03:35 dnsmasq[313]: warning: no upstream servers configured
+Oct 14 20:03:35 dnsmasq-dhcp[313]: DHCP, IP range 10.20.0.50 -- 10.20.0.60, lease time 5m
+Oct 14 20:03:35 dnsmasq-dhcp[313]: DHCP, sockets bound exclusively to interface lan.20
+Oct 14 20:03:35 dnsmasq[313]: cleared cache
+Oct 14 20:03:35 dnsmasq[313]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:35 dnsmasq[313]: config app.lab is 10.30.0.99
+Oct 14 20:03:36 dnsmasq[313]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:36 dnsmasq[313]: config app.lab is 10.30.0.99
+Oct 14 20:03:36 dnsmasq[313]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:36 dnsmasq[313]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:37 dnsmasq[313]: exiting on receipt of SIGTERM
+Oct 14 20:03:37 dnsmasq[337]: started, version 2.90 cachesize 150
+Oct 14 20:03:37 dnsmasq[337]: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua TFTP conntrack ipset nftset auth cryptohash DNSSEC loop-detect inotify dumpfile
+Oct 14 20:03:37 dnsmasq[337]: warning: no upstream servers configured
+Oct 14 20:03:37 dnsmasq-dhcp[337]: DHCP, IP range 10.20.0.50 -- 10.20.0.60, lease time 5m
+Oct 14 20:03:37 dnsmasq-dhcp[337]: DHCP, sockets bound exclusively to interface lan.20
+Oct 14 20:03:37 dnsmasq[337]: cleared cache
+Oct 14 20:03:37 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:37 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:03:37 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:37 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:37 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:37 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:03:37 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:37 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:41 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:41 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:03:41 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:41 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:42 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:42 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:03:42 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:42 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:48 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:48 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:03:48 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:48 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:56 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:56 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:03:56 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:56 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:56 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:56 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:03:56 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:56 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:03:58 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:03:58 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:03:58 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:03:58 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:04:00 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:04:00 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:04:00 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:04:00 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:04:01 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:04:01 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:04:01 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:04:01 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:04:02 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:04:02 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:04:02 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:04:02 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:04:03 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:04:03 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:04:03 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:04:03 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:04:05 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:04:05 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:04:05 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:04:05 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:04:07 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:04:07 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:04:07 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:04:07 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:04:08 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:04:08 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:04:08 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:04:08 dnsmasq[337]: config error is REFUSED (EDE: not ready)
+Oct 14 20:04:09 dnsmasq[337]: query[A] app.lab from 10.20.0.50
+Oct 14 20:04:09 dnsmasq[337]: config app.lab is 10.30.0.10
+Oct 14 20:04:09 dnsmasq[337]: query[AAAA] app.lab from 10.20.0.50
+Oct 14 20:04:09 dnsmasq[337]: config error is REFUSED (EDE: not ready)

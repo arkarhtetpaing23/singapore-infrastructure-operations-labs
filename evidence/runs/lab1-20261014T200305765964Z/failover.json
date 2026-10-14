@@ -1,0 +1,5 @@
+{
+  "observed_restoration_seconds": 0.258,
+  "measurement": "Controller observation includes command/poll latency; not a production convergence benchmark",
+  "route": "10.30.0.10 via 10.255.13.2 dev p-r3 src 10.255.13.1 uid 0 \n    cache \n"
+}

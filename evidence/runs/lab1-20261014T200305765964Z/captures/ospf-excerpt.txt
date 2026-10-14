@@ -1,0 +1,25 @@
+20:03:19.373036 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 44
+20:03:19.807655 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 44
+20:03:20.373060 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48
+20:03:20.373318 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Database Description, length 32
+20:03:20.373457 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Database Description, length 32
+20:03:20.373490 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Database Description, length 52
+20:03:20.373668 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Database Description, length 52
+20:03:20.373697 IP 10.255.12.2 > 224.0.0.5: OSPFv2, LS-Request, length 36
+20:03:20.373785 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Database Description, length 32
+20:03:20.373834 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Request, length 36
+20:03:20.373866 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Update, length 100
+20:03:20.373887 IP 10.255.12.2 > 224.0.0.5: OSPFv2, LS-Update, length 88
+20:03:20.374000 IP 10.255.12.2 > 224.0.0.5: OSPFv2, LS-Update, length 100
+20:03:20.374104 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Update, length 160
+20:03:20.374136 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Update, length 124
+20:03:20.806673 IP 10.255.12.2 > 224.0.0.5: OSPFv2, LS-Ack, length 64
+20:03:20.807638 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 48
+20:03:21.372064 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Ack, length 44
+20:03:21.373043 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48
+20:03:21.807692 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 48
+20:03:22.373085 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48
+20:03:22.807701 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 48
+20:03:23.373144 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48
+20:03:23.807711 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 48
+20:03:24.373158 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48

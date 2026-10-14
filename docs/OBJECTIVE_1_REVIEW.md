@@ -1,6 +1,6 @@
 # Objective 1 engineering review and remaining candidate validation
 
-Review scope: the three executable Linux software laboratories, their actual assistant-run evidence, reproduction materials and claim boundaries. The candidate's initial written understanding has been partially assessed; practical understanding is not yet established. Objective 1 remains in progress until the agreed personal/simulator work is addressed. The candidate subsequently issued NEXT, authorizing portfolio publication work without treating the outstanding practice as complete.
+Review scope: the three executable Linux software laboratories, their actual reference verification and personal Lab 1 evidence, reproduction materials and claim boundaries. The candidate's initial written understanding has been partially assessed; practical understanding is not yet established. Objective 1 remains in progress until the agreed personal/simulator work is addressed. The candidate subsequently issued NEXT, authorizing portfolio publication work without treating the outstanding practice as complete.
 
 ## Verified implementation
 
@@ -35,4 +35,4 @@ There is no physical hardware budget. Rack/stack, copper/fiber certification, tr
 
 ## Navigation status
 
-Engineering implementation and assistant verification: completed for the three Linux labs. Initial networking answers: reviewed with follow-up requirements. A separate local candidate-declared Lab 1 run passed 26 automated checks, with resources retained for practice. Candidate practical validation and simulator component: pending. Objective 1 overall: in progress. Objective 2 publication/review: authorized by the subsequent NEXT command. Objective 3 CV production: not activated. Live publication status is recorded separately in the private portfolio review; this engineering review does not certify candidate mastery. FINISH AND COMPLETE is not warranted.
+Engineering implementation and reference verification: completed for the three Linux labs. Initial networking answers: reviewed with follow-up requirements. I confirmed personally executing the separate Lab 1 run, which passed 26 automated checks, with resources retained for practice. Personal commissioning and result review: completed for Lab 1. Manual changed-fault assessment, Labs 2/3 practice and simulator component: pending. Objective 1 overall: in progress. Objective 2 publication/review: authorized by the subsequent NEXT command. CV revisions are prepared privately for review. Live publication status is recorded separately in the private portfolio review; this engineering review does not certify candidate mastery. FINISH AND COMPLETE is not warranted.

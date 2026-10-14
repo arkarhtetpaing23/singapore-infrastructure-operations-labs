@@ -1,0 +1,316 @@
+[
+  {
+    "name": "r1 container-scoped forwarding enabled",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:12.921639+00:00",
+    "detail": "1"
+  },
+  {
+    "name": "r2 container-scoped forwarding enabled",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:13.015895+00:00",
+    "detail": "1"
+  },
+  {
+    "name": "r3 container-scoped forwarding enabled",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:13.101074+00:00",
+    "detail": "1"
+  },
+  {
+    "name": "DHCP address, router and DNS options",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:17.816618+00:00",
+    "detail": "lease {\n  interface \"lan\";\n  fixed-address 10.20.0.50;\n  option subnet-mask 255.255.255.0;\n  option routers 10.20.0.1;\n  option dhcp-lease-time 300;\n  option dhcp-message-type 5;\n  option domain-name-servers 10.20.0.1;\n  option dhcp-server-identifier 10.20.0.1;\n  option dhcp-renewal-time 150;\n  option broadcast-address 10.20.0.255;\n  option dhcp-rebinding-time 262;\n  option host-name \"c20\";\n  renew 3 2026/10/14 20:05:16;\n  rebind 3 2026/10/14 20:07:39;\n  expire 3 2026/10/14 20:08:17;\n}\n[{\"ifindex\":2,\"link_index\":238,\"ifname\":\"lan\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"group\":\"default\",\"link_type\":\"ether\",\"address\":\"62:7c:20:33:15:78\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"link_netnsid\":0,\"addr_info\":[{\"family\":\"inet\",\"local\":\"10.20.0.50\",\"prefixlen\":24,\"broadcast\":\"10.20.0.255\",\"scope\":\"global\",\"dynamic\":true,\"label\":\"lan\",\"valid_life_time\":300,\"preferred_life_time\":300}]}]\ndefault via 10.20.0.1 dev lan \n10.20.0.0/24 dev lan proto kernel scope link src 10.20.0.50 \n"
+  },
+  {
+    "name": "Static-routing application commissioning",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:18.286068+00:00",
+    "detail": "ARKAR LAB1 SERVICE"
+  },
+  {
+    "name": "Management segment reaches actual SSH listener",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:18.415096+00:00",
+    "detail": "SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u10\n"
+  },
+  {
+    "name": "Client segment denied SSH while HTTP works",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:18.713913+00:00",
+    "detail": "ConnectionRefusedError [Errno 111] Connection refused\n"
+  },
+  {
+    "name": "Explicit SSH deny rule counted traffic",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:18.817040+00:00",
+    "detail": "\t\tip saddr 10.20.0.0/24 ip daddr 10.30.0.10 tcp dport 22 counter packets 2 bytes 120 reject with tcp reset comment \"client-ssh-denied\" # handle 3"
+  },
+  {
+    "name": "r1 two Full OSPF adjacencies",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:31.444696+00:00",
+    "detail": "\nNeighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL\n10.255.0.2        1 Full/-          11.065s            3.368s 10.255.12.2     p-r2:10.255.12.1                     2     0     0\n10.255.0.3        1 Full/-          11.065s            3.745s 10.255.13.2     p-r3:10.255.13.1                     0     0     0\n\nCodes: K - kernel route, C - connected, S - static, R - RIP,\n       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,\n       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,\n       f - OpenFabric,\n       > - selected route, * - FIB route, q - queued, r - rejected, b - backup\n       t - trapped, o - offload failure\n\nO   10.10.0.0/24 [110/10] is directly connected, lan.10, weight 1, 00:00:12\nC>* 10.10.0.0/24 is directly connected, lan.10, 00:00:12\nO   10.20.0.0/24 [110/10] is directly connected, lan.20, weight 1, 00:00:12\nC>* 10.20.0.0/24 is directly connected, lan.20, 00:00:12\nO>* 10.30.0.0/24 [110/20] via 10.255.12.2, p-r2, weight 1, 00:00:06\nO   10.255.12.0/30 [110/10] is directly connected, p-r2, weight 1, 00:00:12\nC>* 10.255.12.0/30 is directly connected, p-r2, 00:00:12\nO   10.255.13.0/30 [110/50] is directly connected, p-r3, weight 1, 00:00:12\nC>* 10.255.13.0/30 is directly connected, p-r3, 00:00:12\nO>* 10.255.23.0/30 [110/20] via 10.255.12.2, p-r2, weight 1, 00:00:06\nlan.10 is up\n  ifindex 5, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.10.0.1/24, Broadcast 10.10.0.255, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.1, Network Type BROADCAST, Cost: 10\n  Transmit Delay is 1 sec, State Waiting, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: <None>\n  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5\n    No Hellos (Passive interface)\n  Neighbor Count is 0, Adjacent neighbor count is 0\nlan.20 is up\n  ifindex 6, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.20.0.1/24, Broadcast 10.20.0.255, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.1, Network Type BROADCAST, Cost: 10\n  Transmit Delay is 1 sec, State Waiting, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: <None>\n  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5\n    No Hellos (Passive interface)\n  Neighbor Count is 0, Adjacent neighbor count is 0\np-r2 is up\n  ifindex 3, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.255.12.1/30, Broadcast 10.255.12.3, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.1, Network Type POINTOPOINT, Cost: 10\n  Transmit Delay is 1 sec, State Point-To-Point, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: OSPFAllRouters\n  Timer intervals configured, Hello 1s, Dead 4s, Wait 4s, Retransmit 5\n    Hello due in 0.933s\n  Neighbor Count is 1, Adjacent neighbor count is 1\np-r3 is up\n  ifindex 4, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.255.13.1/30, Broadcast 10.255.13.3, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.1, Network Type POINTOPOINT, Cost: 50\n  Transmit Delay is 1 sec, State Point-To-Point, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: OSPFAllRouters\n  Timer intervals configured, Hello 1s, Dead 4s, Wait 4s, Retransmit 5\n    Hello due in 0.933s\n  Neighbor Count is 1, Adjacent neighbor count is 1\n\n"
+  },
+  {
+    "name": "r2 two Full OSPF adjacencies",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:31.561507+00:00",
+    "detail": "\nNeighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL\n10.255.0.1        1 Full/-          11.182s            3.816s 10.255.12.1     p-r1:10.255.12.2                     2     0     0\n10.255.0.3        1 Full/-          5.748s             3.628s 10.255.23.2     p-r3:10.255.23.1                     1     0     0\n\nCodes: K - kernel route, C - connected, S - static, R - RIP,\n       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,\n       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,\n       f - OpenFabric,\n       > - selected route, * - FIB route, q - queued, r - rejected, b - backup\n       t - trapped, o - offload failure\n\nO>* 10.10.0.0/24 [110/20] via 10.255.12.1, p-r1, weight 1, 00:00:01\nO>* 10.20.0.0/24 [110/20] via 10.255.12.1, p-r1, weight 1, 00:00:01\nO   10.30.0.0/24 [110/10] is directly connected, lan, weight 1, 00:00:12\nC>* 10.30.0.0/24 is directly connected, lan, 00:00:12\nO   10.255.12.0/30 [110/10] is directly connected, p-r1, weight 1, 00:00:12\nC>* 10.255.12.0/30 is directly connected, p-r1, 00:00:12\nO>* 10.255.13.0/30 [110/60] via 10.255.12.1, p-r1, weight 1, 00:00:01\nO   10.255.23.0/30 [110/10] is directly connected, p-r3, weight 1, 00:00:12\nC>* 10.255.23.0/30 is directly connected, p-r3, 00:00:12\nlan is up\n  ifindex 4, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.30.0.1/24, Broadcast 10.30.0.255, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.2, Network Type BROADCAST, Cost: 10\n  Transmit Delay is 1 sec, State Waiting, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: <None>\n  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5\n    No Hellos (Passive interface)\n  Neighbor Count is 0, Adjacent neighbor count is 0\np-r1 is up\n  ifindex 2, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.255.12.2/30, Broadcast 10.255.12.3, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.2, Network Type POINTOPOINT, Cost: 10\n  Transmit Delay is 1 sec, State Point-To-Point, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: OSPFAllRouters\n  Timer intervals configured, Hello 1s, Dead 4s, Wait 4s, Retransmit 5\n    Hello due in 0.250s\n  Neighbor Count is 1, Adjacent neighbor count is 1\np-r3 is up\n  ifindex 3, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.255.23.1/30, Broadcast 10.255.23.3, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.2, Network Type POINTOPOINT, Cost: 10\n  Transmit Delay is 1 sec, State Point-To-Point, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: OSPFAllRouters\n  Timer intervals configured, Hello 1s, Dead 4s, Wait 4s, Retransmit 5\n    Hello due in 0.250s\n  Neighbor Count is 1, Adjacent neighbor count is 1\n\n"
+  },
+  {
+    "name": "r3 two Full OSPF adjacencies",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:31.678684+00:00",
+    "detail": "\nNeighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL\n10.255.0.1        1 Full/-          11.299s            3.699s 10.255.13.1     p-r1:10.255.13.2                     0     0     0\n10.255.0.2        1 Full/-          5.865s             3.134s 10.255.23.1     p-r2:10.255.23.2                     1     0     0\n\nCodes: K - kernel route, C - connected, S - static, R - RIP,\n       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,\n       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,\n       f - OpenFabric,\n       > - selected route, * - FIB route, q - queued, r - rejected, b - backup\n       t - trapped, o - offload failure\n\nO>* 10.10.0.0/24 [110/60] via 10.255.13.1, p-r1, weight 1, 00:00:01\nO>* 10.20.0.0/24 [110/60] via 10.255.13.1, p-r1, weight 1, 00:00:01\nO>* 10.30.0.0/24 [110/70] via 10.255.13.1, p-r1, weight 1, 00:00:01\nO>* 10.255.12.0/30 [110/60] via 10.255.13.1, p-r1, weight 1, 00:00:01\nO   10.255.13.0/30 [110/50] is directly connected, p-r1, weight 1, 00:00:12\nC>* 10.255.13.0/30 is directly connected, p-r1, 00:00:12\nO   10.255.23.0/30 [110/10] is directly connected, p-r2, weight 1, 00:00:11\nC>* 10.255.23.0/30 is directly connected, p-r2, 00:00:12\np-r1 is up\n  ifindex 2, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.255.13.2/30, Broadcast 10.255.13.3, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.3, Network Type POINTOPOINT, Cost: 50\n  Transmit Delay is 1 sec, State Point-To-Point, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: OSPFAllRouters\n  Timer intervals configured, Hello 1s, Dead 4s, Wait 4s, Retransmit 5\n    Hello due in 0.511s\n  Neighbor Count is 1, Adjacent neighbor count is 1\np-r2 is up\n  ifindex 3, MTU 1500 bytes, BW 10000 Mbit <UP,BROADCAST,RUNNING,MULTICAST>\n  Internet Address 10.255.23.2/30, Broadcast 10.255.23.3, Area 0.0.0.0\n  MTU mismatch detection: enabled\n  Router ID 10.255.0.3, Network Type POINTOPOINT, Cost: 10\n  Transmit Delay is 1 sec, State Point-To-Point, Priority 1\n  No backup designated router on this network\n  Multicast group memberships: OSPFAllRouters\n  Timer intervals configured, Hello 1s, Dead 4s, Wait 4s, Retransmit 5\n    Hello due in 0.511s\n  Neighbor Count is 1, Adjacent neighbor count is 1\n\n"
+  },
+  {
+    "name": "OSPF installed route and application forwarding",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:31.838789+00:00",
+    "detail": "10.30.0.10 via 10.255.12.2 dev p-r2 src 10.255.12.1 uid 0 \n    cache \n"
+  },
+  {
+    "name": "VLAN fault affects VLAN 20 while VLAN 10 works",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:33.352910+00:00",
+    "detail": {
+      "client_ping_rc": 1,
+      "management_ping_rc": 0
+    }
+  },
+  {
+    "name": "VLAN recovery restores application",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:33.632011+00:00",
+    "detail": "ARKAR LAB1 SERVICE"
+  },
+  {
+    "name": "Wrong gateway: local gateway reachable, remote app fails",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:35.008536+00:00",
+    "detail": "default via 10.20.0.254 dev lan \n10.20.0.0/24 dev lan proto kernel scope link src 10.20.0.50 \n"
+  },
+  {
+    "name": "Gateway recovery",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:35.262696+00:00",
+    "detail": "ARKAR LAB1 SERVICE"
+  },
+  {
+    "name": "DNS fault: wrong record, direct-IP service healthy",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:37.073169+00:00",
+    "detail": "10.30.0.99"
+  },
+  {
+    "name": "DNS recovery",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:37.753207+00:00",
+    "detail": "ARKAR LAB1 SERVICE"
+  },
+  {
+    "name": "OSPF area mismatch removes spare adjacency but app remains available",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:42.052856+00:00",
+    "detail": "ARKAR LAB1 SERVICE"
+  },
+  {
+    "name": "OSPF area correction restores spare adjacency",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:47.929781+00:00",
+    "detail": "\nNeighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL\n10.255.0.2        1 Full/-          27.551s            3.882s 10.255.12.2     p-r2:10.255.12.1                     0     0     0\n10.255.0.3        1 Full/-          0.551s             3.243s 10.255.13.2     p-r3:10.255.13.1                     2     0     0\n\n"
+  },
+  {
+    "name": "Primary-link loss forwards via r3 and restores HTTP",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:48.864186+00:00",
+    "detail": {
+      "seconds": 0.2579175999999279,
+      "route": "10.30.0.10 via 10.255.13.2 dev p-r3 src 10.255.13.1 uid 0 \n    cache \n"
+    }
+  },
+  {
+    "name": "Primary-link recovery returns preferred path",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:03:56.251771+00:00",
+    "detail": "10.30.0.10 via 10.255.12.2 dev p-r2 src 10.255.12.1 uid 0 \n    cache \n"
+  },
+  {
+    "name": "Saved OSPF configuration restores forwarding after daemon restart",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:04:09.131601+00:00",
+    "detail": "ARKAR LAB1 SERVICE"
+  },
+  {
+    "name": "Actual tagged VLAN and OSPF packets captured",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:04:10.494877+00:00",
+    "detail": {
+      "vlan10_excerpt": "20:03:18.390896 f2:f2:ca:1b:d4:2f > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 46: vlan 10, p 0, ethertype ARP (0x0806), Request who-has 10.10.0.1 tell 10.10.0.50, length 28\n20:03:18.390922 5e:82:06:10:e1:b7 > f2:f2:ca:1b:d4:2f, ethertype 802.1Q (0x8100), length 46: vlan 10, p 0, ethertype ARP (0x0806), Reply 10.10.0.1 is-at 5e:82:06:10:e1:b7, length 28\n20:03:18.390938 f2:f2:ca:1b:d4:2f > 5e:82:06:10:e1:b7, ethertype 802.1Q (0x8100), length 78: vlan 10, p 0, ethertype IPv4 (0x0800), 10.10.0.50.39980 > 10.30.0.10.22: Flags [S], seq 1287604802, win 64240, options [mss 1460,sackOK,TS val 1115574791 ecr 0,nop,wscale 10], length 0\n20:03:18.391045 5e:82:06:10:e1:b7 > f2:f2:ca:1b:d4:2f, ethertype 802.1Q (0x8100), length 78: vlan 10, p 0, ethertype IPv4 (0x0800), 10.30.0.10.22 > 10.10.0.50.39980: Flags [S.], seq 1562069769, ack 1287604803, win 65160, options [mss 1460,sackOK,TS val 1582083812 ecr 1115574791,nop,wscale 10], length 0\n20:03:18.391075 f2:f2:ca:1b:d4:2f > 5e:82:06:10:e1:b7, ethertype 802.1Q (0x8100), length 70: vlan 10, p 0, ethertype IPv4 (0x0800), 10.10.0.50.39980 > 10.30.0.10.22: Flags [.], ack 1, win 63, options [nop,nop,TS val 1115574791 ecr 1582083812], length 0\n",
+      "vlan20_excerpt": "20:03:17.714992 62:7c:20:33:15:78 > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 346: vlan 20, p 0, ethertype IPv4 (0x0800), 0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from 62:7c:20:33:15:78, length 300\n20:03:17.715528 5e:82:06:10:e1:b7 > 62:7c:20:33:15:78, ethertype 802.1Q (0x8100), length 346: vlan 20, p 0, ethertype IPv4 (0x0800), 10.20.0.1.67 > 10.20.0.50.68: BOOTP/DHCP, Reply, length 300\n20:03:17.715652 62:7c:20:33:15:78 > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 346: vlan 20, p 0, ethertype IPv4 (0x0800), 0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from 62:7c:20:33:15:78, length 300\n20:03:17.717082 5e:82:06:10:e1:b7 > 62:7c:20:33:15:78, ethertype 802.1Q (0x8100), length 346: vlan 20, p 0, ethertype IPv4 (0x0800), 10.20.0.1.67 > 10.20.0.50.68: BOOTP/DHCP, Reply, length 300\n20:03:18.179541 62:7c:20:33:15:78 > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 46: vlan 20, p 0, ethertype ARP (0x0806), Request who-has 10.20.0.1 tell 10.20.0.50, length 28\n",
+      "ospf_excerpt": "20:03:19.373036 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 44\n20:03:19.807655 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 44\n20:03:20.373060 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48\n20:03:20.373318 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Database Description, length 32\n20:03:20.373457 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Database Description, length 32\n20:03:20.373490 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Database Description, length 52\n20:03:20.373668 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Database Description, length 52\n20:03:20.373697 IP 10.255.12.2 > 224.0.0.5: OSPFv2, LS-Request, length 36\n20:03:20.373785 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Database Description, length 32\n20:03:20.373834 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Request, length 36\n20:03:20.373866 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Update, length 100\n20:03:20.373887 IP 10.255.12.2 > 224.0.0.5: OSPFv2, LS-Update, length 88\n20:03:20.374000 IP 10.255.12.2 > 224.0.0.5: OSPFv2, LS-Update, length 100\n20:03:20.374104 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Update, length 160\n20:03:20.374136 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Update, length 124\n20:03:20.806673 IP 10.255.12.2 > 224.0.0.5: OSPFv2, LS-Ack, length 64\n20:03:20.807638 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 48\n20:03:21.372064 IP 10.255.12.1 > 224.0.0.5: OSPFv2, LS-Ack, length 44\n20:03:21.373043 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48\n20:03:21.807692 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 48\n20:03:22.373085 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48\n20:03:22.807701 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 48\n20:03:23.373144 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48\n20:03:23.807711 IP 10.255.12.2 > 224.0.0.5: OSPFv2, Hello, length 48\n20:03:24.373158 IP 10.255.12.1 > 224.0.0.5: OSPFv2, Hello, length 48\n"
+    }
+  },
+  {
+    "name": "Final allowed/denied traffic matrix",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:04:11.167988+00:00",
+    "detail": "HTTP allowed; management SSH TCP/banner allowed; client SSH TCP denied. SSH authentication not tested."
+  },
+  {
+    "name": "Runtime isolation and resource limits",
+    "passed": true,
+    "observed_utc": "2026-10-14T20:04:11.727601+00:00",
+    "detail": [
+      {
+        "node": "c20",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab1-305765964z-client",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": [
+          "CAP_NET_ADMIN",
+          "CAP_NET_RAW"
+        ]
+      },
+      {
+        "node": "m10",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab1-305765964z-management",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": [
+          "CAP_NET_ADMIN",
+          "CAP_NET_RAW"
+        ]
+      },
+      {
+        "node": "sw1",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab1-305765964z-client",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": [
+          "CAP_NET_ADMIN",
+          "CAP_NET_RAW"
+        ]
+      },
+      {
+        "node": "sw2",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab1-305765964z-trunk",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": [
+          "CAP_NET_ADMIN",
+          "CAP_NET_RAW"
+        ]
+      },
+      {
+        "node": "r1",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab1-305765964z-gateway",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": [
+          "CAP_NET_ADMIN",
+          "CAP_NET_RAW",
+          "CAP_SYS_ADMIN"
+        ]
+      },
+      {
+        "node": "r2",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab1-305765964z-r12",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": [
+          "CAP_NET_ADMIN",
+          "CAP_NET_RAW",
+          "CAP_SYS_ADMIN"
+        ]
+      },
+      {
+        "node": "r3",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab1-305765964z-r13",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": [
+          "CAP_NET_ADMIN",
+          "CAP_NET_RAW",
+          "CAP_SYS_ADMIN"
+        ]
+      },
+      {
+        "node": "srv",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab1-305765964z-server",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": [
+          "CAP_NET_ADMIN",
+          "CAP_NET_RAW"
+        ]
+      },
+      {
+        "network": "client",
+        "safe": true,
+        "internal": true
+      },
+      {
+        "network": "management",
+        "safe": true,
+        "internal": true
+      },
+      {
+        "network": "trunk",
+        "safe": true,
+        "internal": true
+      },
+      {
+        "network": "gateway",
+        "safe": true,
+        "internal": true
+      },
+      {
+        "network": "r12",
+        "safe": true,
+        "internal": true
+      },
+      {
+        "network": "r13",
+        "safe": true,
+        "internal": true
+      },
+      {
+        "network": "r23",
+        "safe": true,
+        "internal": true
+      },
+      {
+        "network": "server",
+        "safe": true,
+        "internal": true
+      }
+    ]
+  }
+]
