@@ -1,12 +1,12 @@
 # Claim-to-evidence ledger
 
-Current evidence is assistant-executed. The rows below describe implemented laboratory capabilities, not candidate proficiency. Candidate CV claims remain withheld until attributable personal practice and understanding are verified.
+The selected published execution evidence is assistant-executed. The rows below describe implemented laboratory capabilities, not candidate proficiency. Initial written networking answers have been reviewed, and a separate local candidate-declared automated Lab 1 run passed 26 checks. These do not establish unaided diagnosis. Candidate CV skill claims remain withheld until attributable personal practice and understanding are verified.
 
 | Capability | Actual implementation evidence | Candidate validation | Boundary |
 |---|---|---|---|
 | VLAN configuration/trunk fault isolation | Lab1 bridge tables, tagged captures, affected/unaffected checks | Pending | Linux bridges; Cisco/Packet Tracer execution pending |
-| IPv4/DHCP/DNS diagnosis | Lab1 lease/options, address/routes, direct-IP versus named requests | Pending | Isolated fictional network |
-| OSPF routing and recovery | Lab1 Full neighbors, installed routes, area fault, alternate forwarding and config restart | Pending | FRR 8.4; accelerated lab timers |
+| IPv4/DHCP/DNS diagnosis | Lab1 lease/options, address/routes, direct-IP versus named requests | Initial written concepts reviewed; practical validation pending | Isolated fictional network |
+| OSPF routing and recovery | Lab1 Full neighbors, installed routes, area fault, alternate forwarding and config restart | Initial adjacency explanation reviewed; service checks and practical validation pending | FRR 8.4; accelerated lab timers |
 | Management access policy | Actual nftables counters and SSH TCP/banner checks | Pending | Authenticated SSH administration not tested |
 | Linux service/log troubleshooting | Lab2 syntax failure, startup log, process/socket evidence and rollback | Pending | Container supervisor; no systemd/VM boot claim |
 | Permissions and storage faults | Lab2 403/log evidence and real HTTP 507/ENOSPC response | Pending | Bounded disposable filesystem, no physical disk fault |

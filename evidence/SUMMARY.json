@@ -100,9 +100,16 @@
     }
   ],
   "limitations": [
-    "Assistant execution only; candidate practice/understanding pending",
+    "Selected published verification runs were assistant-executed; candidate practical validation remains pending",
     "Packet Tracer execution pending",
     "No physical hardware or production experience",
-    "Local only; GitHub publication pending"
-  ]
+    "Publication verification is recorded separately; this summary describes selected execution evidence"
+  ],
+  "selected_run_scope": "Three assistant-executed baseline verification runs; excludes later local candidate-declared repeats",
+  "candidate_progress": {
+    "initial_networking_written_review": "Core concepts recognized; requested service verification and practical interpretation remain pending",
+    "local_candidate_declared_lab1_automation": "26 checks passed; raw run not selected for public release; operator declaration is not authentication",
+    "manual_diagnosis_and_handover": "pending",
+    "lab2_and_lab3_candidate_validation": "pending"
+  }
 }

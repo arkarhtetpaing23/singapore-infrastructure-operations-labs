@@ -1,8 +1,10 @@
-# Singapore infrastructure operations laboratories
+# Infrastructure operations laboratories — Arkar Htet Paing
 
-AI-assisted engineering practice for Arkar Htet Paing's junior data center and network career preparation. These are isolated software laboratories. Current candidate personal validation is pending. No production employment, physical installation, certification or unaided authorship is claimed.
+Software laboratories supporting preparation for Junior Data Center Engineer and Junior Network Engineer roles in Singapore. The projects connect networking, service recovery and monitoring to practical operations: commissioning a service, isolating faults, restoring availability and documenting evidence.
 
-The three executable Linux laboratories have passed assistant-run verification: 26 network checks, 15 service-recovery checks and 11 monitoring/operations checks. See the [evidence index](evidence/INDEX.md) and actual run records. Candidate personal validation and Packet Tracer execution remain pending. Publication has not yet been performed.
+The three executable Linux laboratories have passed assistant-run verification: **26 network checks, 15 service-recovery checks and 11 monitoring/operations checks**. The [evidence index](evidence/INDEX.md) links the actual commands, results, configurations and captures. These counts describe automated laboratory checks; they do not establish candidate mastery.
+
+This portfolio was developed with AI assistance. Arkar's initial networking explain-back has been reviewed; manual diagnosis, handover and the remaining personal practice are still in progress. Packet Tracer execution is pending. See [contribution boundaries](docs/CONTRIBUTION.md) and the [claim ledger](docs/CLAIM_LEDGER.md) for the distinction between implemented capabilities and demonstrated candidate skills.
 
 The three projects are network commissioning/fault isolation, Linux service recovery, and monitoring/incident handover. Packet Tracer switching practice is a separate candidate exercise requiring an official Cisco account/installation. No `.pkt` file or simulator result is fabricated.
 
@@ -12,7 +14,22 @@ The three projects are network commissioning/fault isolation, Linux service reco
 | [Service recovery](labs/02-service-recovery/README.md) | Configuration/startup failure, permissions, ENOSPC and clean-target restore | Backup manifest, actual client responses and recovery checks |
 | [Monitoring operations](labs/03-monitoring-operations/README.md) | Prometheus/Alertmanager firing/resolved deliveries, exporter failure, silence and fictional work-order review | Actual incident chronology and local delivery journal |
 
-Start personal development with the [network foundations lesson](docs/FIRST_PRACTICE_LESSON.md) and [practice guide](docs/CANDIDATE_PRACTICE.md). Read [contribution boundaries](docs/CONTRIBUTION.md), [operations discipline](docs/OPERATIONS.md), [verification review](docs/OBJECTIVE_1_REVIEW.md) and [Packet Tracer exercise](docs/PACKET_TRACER_EXERCISE.md). These projects support learning; they do not establish professional employment, physical hardware competence or unaided candidate mastery.
+For a quick technical review, start with the [portfolio guide](docs/PORTFOLIO_GUIDE.md). For personal development, use the [network foundations lesson](docs/FIRST_PRACTICE_LESSON.md) and [practice guide](docs/CANDIDATE_PRACTICE.md). The [operations guide](docs/OPERATIONS.md) explains change, rollback, escalation and handover. The [engineering review](docs/OBJECTIVE_1_REVIEW.md) records verified results and remaining work.
+
+## Reproduce a laboratory
+
+Use a Linux host with Python 3 and Docker Engine. Initial image construction needs access to Debian package repositories. The lab nodes use Debian Bookworm; exact tested package versions and image ID are preserved in each evidence run. The host controller currently runs on Python 3.13.14. Future package resolution can differ and should be verified.
+
+```sh
+git clone https://github.com/arkarhtetpaing23/singapore-infrastructure-operations-labs.git
+cd singapore-infrastructure-operations-labs
+python3 scripts/labctl.py build
+python3 scripts/labctl.py lab1 --actor candidate --keep
+```
+
+Use `--actor candidate` only when Arkar personally initiates and observes a run. The actor field is a declaration, not identity authentication. `--keep` retains that run for inspection; follow the [practice guide](docs/CANDIDATE_PRACTICE.md) for commands and label-checked cleanup. Omit `--keep` for automatic cleanup. Generated runs remain local by default until their evidence and claims have been reviewed for publication.
+
+Run `lab2` or `lab3` with the same controller for service recovery and monitoring. The [evidence index](evidence/INDEX.md) contains the selected verification runs. A successful run requires its recorded checks and final status; cleanup status must also be checked unless resources were intentionally retained.
 
 ## Execution scope
 
@@ -25,4 +42,8 @@ python3 scripts/labctl.py lab2 --actor assistant
 python3 scripts/labctl.py lab3 --actor assistant
 ```
 
-Use `--actor candidate` only when the candidate actually initiates and observes the run. That option is a record of the declared operator, not authentication or proof of understanding. `--keep` retains that run for manual practice; resource names are saved with its evidence. Candidate explain-back and changed-fault practice are separate requirements.
+## Scope and supporting material
+
+These are isolated software exercises, with simulated operational incidents. They do not demonstrate production employment, physical rack/cable work, authenticated SSH administration or certification. The [Packet Tracer exercise](docs/PACKET_TRACER_EXERCISE.md) is a separate, unexecuted learning component; no `.pkt` artifact is claimed. Academic certificates, transcripts, contact details and application documents are kept outside this repository.
+
+Platform references are listed in each laboratory README. Dependency packages retain their own licenses. No proprietary network-appliance image or copied third-party portfolio is supplied.
