@@ -1,0 +1,184 @@
+{
+  "service_fault_utc": "2026-10-14T19:44:23.471790+00:00",
+  "observed_firing_delivery_seconds": 8.592,
+  "monitor_fault_utc": "2026-10-14T19:44:34.502256+00:00",
+  "measurement_scope": "Actual lab receiver/poll observations with accelerated 1s scrape and 5s alert hold; not a production SLA",
+  "delivered_events": [
+    {
+      "received_utc": "2026-10-14T19:44:31.730143+00:00",
+      "payload": {
+        "receiver": "lab-local",
+        "status": "firing",
+        "alerts": [
+          {
+            "status": "firing",
+            "labels": {
+              "alertname": "LabServiceUnavailable",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "service": "demo",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Demo service probe failed"
+            },
+            "startsAt": "2026-10-14T19:44:30.712Z",
+            "endsAt": "0001-01-01T00:00:00Z",
+            "generatorURL": "http://prom:9090/graph?g0.expr=lab_probe_success%7Bservice%3D%22demo%22%7D+%3D%3D+0&g0.tab=1",
+            "fingerprint": "ca3ea1429f03a34d"
+          }
+        ],
+        "groupLabels": {
+          "alertname": "LabServiceUnavailable"
+        },
+        "commonLabels": {
+          "alertname": "LabServiceUnavailable",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "service": "demo",
+          "severity": "warning"
+        },
+        "commonAnnotations": {
+          "summary": "Demo service probe failed"
+        },
+        "externalURL": "http://am:9093",
+        "version": "4",
+        "groupKey": "{}:{alertname=\"LabServiceUnavailable\"}",
+        "truncatedAlerts": 0
+      }
+    },
+    {
+      "received_utc": "2026-10-14T19:44:33.725587+00:00",
+      "payload": {
+        "receiver": "lab-local",
+        "status": "resolved",
+        "alerts": [
+          {
+            "status": "resolved",
+            "labels": {
+              "alertname": "LabServiceUnavailable",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "service": "demo",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Demo service probe failed"
+            },
+            "startsAt": "2026-10-14T19:44:30.712Z",
+            "endsAt": "2026-10-14T19:44:33.712Z",
+            "generatorURL": "http://prom:9090/graph?g0.expr=lab_probe_success%7Bservice%3D%22demo%22%7D+%3D%3D+0&g0.tab=1",
+            "fingerprint": "ca3ea1429f03a34d"
+          }
+        ],
+        "groupLabels": {
+          "alertname": "LabServiceUnavailable"
+        },
+        "commonLabels": {
+          "alertname": "LabServiceUnavailable",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "service": "demo",
+          "severity": "warning"
+        },
+        "commonAnnotations": {
+          "summary": "Demo service probe failed"
+        },
+        "externalURL": "http://am:9093",
+        "version": "4",
+        "groupKey": "{}:{alertname=\"LabServiceUnavailable\"}",
+        "truncatedAlerts": 0
+      }
+    },
+    {
+      "received_utc": "2026-10-14T19:44:42.716352+00:00",
+      "payload": {
+        "receiver": "lab-local",
+        "status": "firing",
+        "alerts": [
+          {
+            "status": "firing",
+            "labels": {
+              "alertname": "LabProbeExporterDown",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Probe exporter scrape failed"
+            },
+            "startsAt": "2026-10-14T19:44:41.712Z",
+            "endsAt": "0001-01-01T00:00:00Z",
+            "generatorURL": "http://prom:9090/graph?g0.expr=up%7Bjob%3D%22service-probe%22%7D+%3D%3D+0&g0.tab=1",
+            "fingerprint": "31b56e7596ee7da1"
+          }
+        ],
+        "groupLabels": {
+          "alertname": "LabProbeExporterDown"
+        },
+        "commonLabels": {
+          "alertname": "LabProbeExporterDown",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "severity": "warning"
+        },
+        "commonAnnotations": {
+          "summary": "Probe exporter scrape failed"
+        },
+        "externalURL": "http://am:9093",
+        "version": "4",
+        "groupKey": "{}:{alertname=\"LabProbeExporterDown\"}",
+        "truncatedAlerts": 0
+      }
+    },
+    {
+      "received_utc": "2026-10-14T19:44:44.717578+00:00",
+      "payload": {
+        "receiver": "lab-local",
+        "status": "resolved",
+        "alerts": [
+          {
+            "status": "resolved",
+            "labels": {
+              "alertname": "LabProbeExporterDown",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Probe exporter scrape failed"
+            },
+            "startsAt": "2026-10-14T19:44:41.712Z",
+            "endsAt": "2026-10-14T19:44:44.712Z",
+            "generatorURL": "http://prom:9090/graph?g0.expr=up%7Bjob%3D%22service-probe%22%7D+%3D%3D+0&g0.tab=1",
+            "fingerprint": "31b56e7596ee7da1"
+          }
+        ],
+        "groupLabels": {
+          "alertname": "LabProbeExporterDown"
+        },
+        "commonLabels": {
+          "alertname": "LabProbeExporterDown",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "severity": "warning"
+        },
+        "commonAnnotations": {
+          "summary": "Probe exporter scrape failed"
+        },
+        "externalURL": "http://am:9093",
+        "version": "4",
+        "groupKey": "{}:{alertname=\"LabProbeExporterDown\"}",
+        "truncatedAlerts": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "data": {
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "LabServiceUnavailable",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "service": "demo",
+          "severity": "warning"
+        },
+        "annotations": {
+          "summary": "Demo service probe failed"
+        },
+        "state": "pending",
+        "activeAt": "2026-10-14T19:44:25.712015814Z",
+        "value": "0e+00"
+      }
+    ]
+  }
+}

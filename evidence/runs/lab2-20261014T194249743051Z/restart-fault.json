@@ -1,0 +1,13 @@
+{
+  "direct_ip_response": {
+    "code": 0,
+    "body": "",
+    "stderr": "curl: (28) Failed to connect to 172.18.0.2 port 80 after 1001 ms: Timeout was reached\n"
+  },
+  "alias_response": {
+    "code": 0,
+    "body": "",
+    "stderr": "curl: (6) Could not resolve host: app\n"
+  },
+  "container_logs": "127.0.0.1 - - [14/Oct/2026 19:42:50] \"GET /health HTTP/1.0\" 200 -\n127.0.0.1 - - [14/Oct/2026 19:42:50] \"POST /events HTTP/1.0\" 201 -\n127.0.0.1 - - [14/Oct/2026 19:42:51] \"POST /events HTTP/1.0\" 201 -\n2026/10/14 19:42:53 [emerg] 8#8: unknown directive \"this_directive_does_not_exist\" in /etc/nginx/nginx.conf:17\n"
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Commissioned nginx frontend and backend health",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:50.849680+00:00",
+    "detail": {
+      "code": 200,
+      "body": "{\"asset\": \"fictional-app-01\", \"version\": 1, \"message\": \"verified service data\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Baseline write operation succeeds",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:51.100612+00:00",
+    "detail": {
+      "code": 201,
+      "body": "{\"stored\": true}",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Service/data configuration persists through container restart",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:52.176721+00:00",
+    "detail": {
+      "code": 200,
+      "body": "{\"asset\": \"fictional-app-01\", \"version\": 2, \"message\": \"verified service data\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Syntax validation rejects invalid change while current worker still serves",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:52.816520+00:00",
+    "detail": {
+      "syntax_returncode": 1,
+      "current_response": {
+        "code": 200,
+        "body": "{\"asset\": \"fictional-app-01\", \"version\": 2, \"message\": \"verified service data\"}\n",
+        "stderr": ""
+      }
+    }
+  },
+  {
+    "name": "Invalid saved config causes actual restart outage",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:55.113246+00:00",
+    "detail": {
+      "direct_ip_response": {
+        "code": 0,
+        "body": "",
+        "stderr": "curl: (28) Failed to connect to 172.18.0.2 port 80 after 1001 ms: Timeout was reached\n"
+      },
+      "alias_response": {
+        "code": 0,
+        "body": "",
+        "stderr": "curl: (6) Could not resolve host: app\n"
+      }
+    }
+  },
+  {
+    "name": "Config rollback restores useful service",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:55.878027+00:00",
+    "detail": {
+      "code": 200,
+      "body": "{\"asset\": \"fictional-app-01\", \"version\": 2, \"message\": \"verified service data\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "File permission fault causes HTTP 403 with supporting error",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:56.239581+00:00",
+    "detail": {
+      "code": 403,
+      "body": "<html>\n<head><title>403 Forbidden</title></head>\n<body>\n<center><h1>403 Forbidden</h1></center>\n<hr><center>nginx/1.22.1</center>\n</body>\n</html>\n",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Permission recovery restores data",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:56.571482+00:00",
+    "detail": {
+      "code": 200,
+      "body": "{\"asset\": \"fictional-app-01\", \"version\": 2, \"message\": \"verified service data\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Bounded full filesystem fails actual writes while reads remain healthy",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:57.032905+00:00",
+    "detail": {
+      "code": 507,
+      "body": "{\"error\": \"journal write failed\", \"errno\": 28}",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Scoped space recovery restores writes",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:57.290554+00:00",
+    "detail": {
+      "code": 201,
+      "body": "{\"stored\": true}",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Data corruption observed in actual served content",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:57.511238+00:00",
+    "detail": {
+      "code": 200,
+      "body": "{\"version\":999,\"message\":\"damaged lab data\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Backup restores bytes, permissions and useful response on clean target",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:58.240595+00:00",
+    "detail": {
+      "code": 200,
+      "body": "{\"asset\": \"fictional-app-01\", \"version\": 2, \"message\": \"verified service data\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Restored backend write path is usable",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:58.449292+00:00",
+    "detail": {
+      "code": 201,
+      "body": "{\"stored\": true}",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Final source service and writes healthy",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:59.133936+00:00",
+    "detail": {
+      "code": 200,
+      "body": "{\"asset\": \"fictional-app-01\", \"version\": 2, \"message\": \"verified service data\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "name": "Runtime isolation and resource limits",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:42:59.516621+00:00",
+    "detail": [
+      {
+        "node": "app",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab2-249743051z-service",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": null
+      },
+      {
+        "node": "client",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab2-249743051z-service",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 67108864,
+        "cap_add": null
+      },
+      {
+        "node": "restore",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab2-249743051z-service",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": null
+      },
+      {
+        "network": "service",
+        "safe": true,
+        "internal": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "received_utc": "2026-10-14T19:44:33.725587+00:00",
+  "payload": {
+    "receiver": "lab-local",
+    "status": "resolved",
+    "alerts": [
+      {
+        "status": "resolved",
+        "labels": {
+          "alertname": "LabServiceUnavailable",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "service": "demo",
+          "severity": "warning"
+        },
+        "annotations": {
+          "summary": "Demo service probe failed"
+        },
+        "startsAt": "2026-10-14T19:44:30.712Z",
+        "endsAt": "2026-10-14T19:44:33.712Z",
+        "generatorURL": "http://prom:9090/graph?g0.expr=lab_probe_success%7Bservice%3D%22demo%22%7D+%3D%3D+0&g0.tab=1",
+        "fingerprint": "ca3ea1429f03a34d"
+      }
+    ],
+    "groupLabels": {
+      "alertname": "LabServiceUnavailable"
+    },
+    "commonLabels": {
+      "alertname": "LabServiceUnavailable",
+      "environment": "lab",
+      "instance": "probe:8080",
+      "job": "service-probe",
+      "service": "demo",
+      "severity": "warning"
+    },
+    "commonAnnotations": {
+      "summary": "Demo service probe failed"
+    },
+    "externalURL": "http://am:9093",
+    "version": "4",
+    "groupKey": "{}:{alertname=\"LabServiceUnavailable\"}",
+    "truncatedAlerts": 0
+  }
+}

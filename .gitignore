@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.local/
+evidence/runs/*/private/
+candidate-practice/private/
+*.key
+*.pem
+.env
+evidence/runs/*
+!evidence/runs/lab1-20261014T193910216722Z/
+!evidence/runs/lab2-20261014T194249743051Z/
+!evidence/runs/lab3-20261014T194415047830Z/

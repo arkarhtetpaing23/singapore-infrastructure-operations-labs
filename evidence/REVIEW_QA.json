@@ -1,0 +1,102 @@
+{
+  "reviewed_utc": "2026-10-14T19:54:28.543287+00:00",
+  "selected_runs": [
+    {
+      "lab": "lab1",
+      "run": "lab1-20261014T193910216722Z",
+      "actor": "assistant",
+      "started_utc": "2026-10-14T19:39:10.216927+00:00",
+      "ended_utc": "2026-10-14T19:40:13.694683+00:00",
+      "checks": 26,
+      "status": "passed",
+      "cleanup_verified": true,
+      "relevant_source_hashes_match": true,
+      "image_id": "sha256:871d0b1b187dbdc53ec6f4918c97c6dc3c35d20edc3cd2f2f4d812537fd560d6",
+      "candidate_validation": "pending"
+    },
+    {
+      "lab": "lab2",
+      "run": "lab2-20261014T194249743051Z",
+      "actor": "assistant",
+      "started_utc": "2026-10-14T19:42:49.743143+00:00",
+      "ended_utc": "2026-10-14T19:42:59.516846+00:00",
+      "checks": 15,
+      "status": "passed",
+      "cleanup_verified": true,
+      "relevant_source_hashes_match": true,
+      "image_id": "sha256:871d0b1b187dbdc53ec6f4918c97c6dc3c35d20edc3cd2f2f4d812537fd560d6",
+      "candidate_validation": "pending"
+    },
+    {
+      "lab": "lab3",
+      "run": "lab3-20261014T194415047830Z",
+      "actor": "assistant",
+      "started_utc": "2026-10-14T19:44:15.048023+00:00",
+      "ended_utc": "2026-10-14T19:44:59.247362+00:00",
+      "checks": 11,
+      "status": "passed",
+      "cleanup_verified": true,
+      "relevant_source_hashes_match": true,
+      "image_id": "sha256:871d0b1b187dbdc53ec6f4918c97c6dc3c35d20edc3cd2f2f4d812537fd560d6",
+      "candidate_validation": "pending"
+    }
+  ],
+  "recorded_checks": 52,
+  "failed_runs_retained_locally": 8,
+  "relevant_source_comparison": [
+    {
+      "lab": "lab1",
+      "relevant_files_checked": 12,
+      "match": true,
+      "scope": "Manifest includes other labs; comparison applies to source/config/runtime relevant to this run."
+    },
+    {
+      "lab": "lab2",
+      "relevant_files_checked": 11,
+      "match": true,
+      "scope": "Manifest includes other labs; comparison applies to source/config/runtime relevant to this run."
+    },
+    {
+      "lab": "lab3",
+      "relevant_files_checked": 16,
+      "match": true,
+      "scope": "Manifest includes other labs; comparison applies to source/config/runtime relevant to this run."
+    }
+  ],
+  "local_markdown_links_valid": true,
+  "selected_backup_member_list_verified": true,
+  "seven_original_reference_files_unchanged": true,
+  "selected_packet_endpoints_dns_review": "Passed; see CAPTURE_REVIEW.json. Optional host decoder-plugin warning disclosed.",
+  "retained_practice_helper_smoke_test": {
+    "actor": "assistant",
+    "run": "lab2-20261014T195104845546Z",
+    "list_and_exec_verified": true,
+    "declared_actor_record_verified": true,
+    "label_checked_cleanup_verified": true,
+    "after_cleanup_list_absent": true
+  },
+  "final_live_docker_label_queries": {
+    "project_containers_remaining": 0,
+    "project_networks_remaining": 0,
+    "scope": "Read-only Docker ps/network ls filtered by this project label; command exits were successful."
+  },
+  "candidate_personal_validation": "pending",
+  "packet_tracer_execution": "pending",
+  "gns3_eve_vm_execution": "not_performed",
+  "github_publication": "not_performed",
+  "cv_generation": "not_performed",
+  "privacy_scan_scope": "Known credential markers/contact strings and staged filename review; no universal privacy/security certification",
+  "limitations": [
+    "Software lab only; no production/hardware experience",
+    "Actor declarations and hashes do not authenticate identity or mastery",
+    "Build package versions are recorded; future APT resolution may change",
+    "No NEXT transition authorized"
+  ],
+  "staged_file_review": {
+    "file_count_before_manifest": 107,
+    "all_staged_blobs_match_reviewed_files": true,
+    "failed_and_manual_run_raw_evidence_excluded": true,
+    "known_private_markers_absent": true
+  },
+  "whitespace_review": "Source/docs check passed with raw transcripts excluded and blank-at-EOF advisory disabled; raw terminal spacing retained unchanged. Default git diff --check produced those formatting advisories."
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "node": "app",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab2-249743051z-service",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": null
+  },
+  {
+    "node": "client",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab2-249743051z-service",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 67108864,
+    "cap_add": null
+  },
+  {
+    "node": "restore",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab2-249743051z-service",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": null
+  },
+  {
+    "network": "service",
+    "safe": true,
+    "internal": true
+  }
+]

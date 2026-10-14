@@ -1,0 +1,20 @@
+lease {
+  interface "lan";
+  fixed-address 10.20.0.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.20.0.1;
+  option dhcp-lease-time 300;
+  option dhcp-message-type 5;
+  option domain-name-servers 10.20.0.1;
+  option dhcp-server-identifier 10.20.0.1;
+  option dhcp-renewal-time 150;
+  option broadcast-address 10.20.0.255;
+  option dhcp-rebinding-time 262;
+  option host-name "c20";
+  renew 3 2026/10/14 19:41:42;
+  rebind 3 2026/10/14 19:43:45;
+  expire 3 2026/10/14 19:44:23;
+}
+[{"ifindex":2,"link_index":162,"ifname":"lan","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"noqueue","operstate":"UP","group":"default","link_type":"ether","address":"56:40:ba:53:e6:34","broadcast":"ff:ff:ff:ff:ff:ff","link_netnsid":0,"addr_info":[{"family":"inet","local":"10.20.0.50","prefixlen":24,"broadcast":"10.20.0.255","scope":"global","dynamic":true,"label":"lan","valid_life_time":300,"preferred_life_time":300}]}]
+default via 10.20.0.1 dev lan 
+10.20.0.0/24 dev lan proto kernel scope link src 10.20.0.50 

@@ -1,0 +1,71 @@
+{
+  "independent_service_response": {
+    "service": "monitored-demo",
+    "healthy": true
+  },
+  "delivery": {
+    "received_utc": "2026-10-14T19:44:42.716352+00:00",
+    "payload": {
+      "receiver": "lab-local",
+      "status": "firing",
+      "alerts": [
+        {
+          "status": "firing",
+          "labels": {
+            "alertname": "LabProbeExporterDown",
+            "environment": "lab",
+            "instance": "probe:8080",
+            "job": "service-probe",
+            "severity": "warning"
+          },
+          "annotations": {
+            "summary": "Probe exporter scrape failed"
+          },
+          "startsAt": "2026-10-14T19:44:41.712Z",
+          "endsAt": "0001-01-01T00:00:00Z",
+          "generatorURL": "http://prom:9090/graph?g0.expr=up%7Bjob%3D%22service-probe%22%7D+%3D%3D+0&g0.tab=1",
+          "fingerprint": "31b56e7596ee7da1"
+        }
+      ],
+      "groupLabels": {
+        "alertname": "LabProbeExporterDown"
+      },
+      "commonLabels": {
+        "alertname": "LabProbeExporterDown",
+        "environment": "lab",
+        "instance": "probe:8080",
+        "job": "service-probe",
+        "severity": "warning"
+      },
+      "commonAnnotations": {
+        "summary": "Probe exporter scrape failed"
+      },
+      "externalURL": "http://am:9093",
+      "version": "4",
+      "groupKey": "{}:{alertname=\"LabProbeExporterDown\"}",
+      "truncatedAlerts": 0
+    }
+  },
+  "alerts": {
+    "status": "success",
+    "data": {
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabProbeExporterDown",
+            "environment": "lab",
+            "instance": "probe:8080",
+            "job": "service-probe",
+            "severity": "warning"
+          },
+          "annotations": {
+            "summary": "Probe exporter scrape failed"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-14T19:44:36.712015814Z",
+          "value": "0e+00"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Checking /etc/prometheus/lab.yml
+  SUCCESS: 1 rule files found
+ SUCCESS: /etc/prometheus/lab.yml is valid prometheus config file syntax
+
+Checking /etc/prometheus/lab-rules.yml
+  SUCCESS: 2 rules found
+
+Unit Testing:  /etc/prometheus/rule-tests.yml
+  SUCCESS
+

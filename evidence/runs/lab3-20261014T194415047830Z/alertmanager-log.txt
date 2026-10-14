@@ -1,0 +1,6 @@
+ts=2026-10-14T19:44:17.141Z caller=main.go:241 level=info msg="Starting Alertmanager" version="(version=0.25.0, branch=debian/sid, revision=0.25.0-1+b4)"
+ts=2026-10-14T19:44:17.141Z caller=main.go:242 level=info build_context="(go=go1.19.8, platform=linux/amd64, user=team+pkg-go@tracker.debian.org, date=20230409-09:50:43)"
+ts=2026-10-14T19:44:17.224Z caller=coordinator.go:113 level=info component=configuration msg="Loading configuration file" file=/etc/prometheus/alertmanager-lab.yml
+ts=2026-10-14T19:44:17.225Z caller=coordinator.go:126 level=info component=configuration msg="Completed loading of configuration file" file=/etc/prometheus/alertmanager-lab.yml
+ts=2026-10-14T19:44:17.232Z caller=tls_config.go:232 level=info msg="Listening on" address=[::]:9093
+ts=2026-10-14T19:44:17.232Z caller=tls_config.go:235 level=info msg="TLS is disabled." http2=false address=[::]:9093

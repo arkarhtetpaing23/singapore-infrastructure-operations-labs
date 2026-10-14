@@ -1,0 +1,11 @@
+table inet lab_policy {
+  chain forward {
+    type filter hook forward priority 0; policy drop;
+    ct state established,related accept
+    ip saddr 10.20.0.0/24 ip daddr 10.30.0.10 tcp dport 22 counter reject with tcp reset comment "client-ssh-denied"
+    ip saddr 10.10.0.0/24 ip daddr 10.30.0.10 tcp dport 22 counter accept comment "management-ssh-allowed"
+    ip saddr { 10.10.0.0/24, 10.20.0.0/24 } ip daddr 10.30.0.10 tcp dport 80 counter accept comment "service-http-allowed"
+    ip protocol icmp counter accept comment "lab-diagnostics"
+    counter drop comment "unapproved-forwarding"
+  }
+}

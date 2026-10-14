@@ -1,0 +1,47 @@
+{
+  "requested": {
+    "matchers": [
+      {
+        "name": "alertname",
+        "value": "LabServiceUnavailable",
+        "isRegex": false
+      }
+    ],
+    "startsAt": "2026-10-14T19:44:45.478107+00:00",
+    "endsAt": "2026-10-14T19:46:15.478107+00:00",
+    "createdBy": "assistant",
+    "comment": "Approved isolated-lab maintenance; restore and verify before closing"
+  },
+  "silence_id": "3a40b1d8-c285-450a-bfd3-2ae2177acfb4",
+  "observed_alertmanager_status": {
+    "annotations": {
+      "summary": "Demo service probe failed"
+    },
+    "endsAt": "2026-10-14T19:48:53.712Z",
+    "fingerprint": "ca3ea1429f03a34d",
+    "receivers": [
+      {
+        "name": "lab-local"
+      }
+    ],
+    "startsAt": "2026-10-14T19:44:53.712Z",
+    "status": {
+      "inhibitedBy": [],
+      "silencedBy": [
+        "3a40b1d8-c285-450a-bfd3-2ae2177acfb4"
+      ],
+      "state": "suppressed"
+    },
+    "updatedAt": "2026-10-14T19:44:53.714Z",
+    "generatorURL": "http://prom:9090/graph?g0.expr=lab_probe_success%7Bservice%3D%22demo%22%7D+%3D%3D+0&g0.tab=1",
+    "labels": {
+      "alertname": "LabServiceUnavailable",
+      "environment": "lab",
+      "instance": "probe:8080",
+      "job": "service-probe",
+      "service": "demo",
+      "severity": "warning"
+    }
+  },
+  "receiver_events_since_start": []
+}

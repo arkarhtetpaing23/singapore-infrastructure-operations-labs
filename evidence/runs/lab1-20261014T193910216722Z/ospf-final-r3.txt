@@ -1,0 +1,20 @@
+
+Neighbor ID     Pri State           Up Time         Dead Time Address         Interface                        RXmtL RqstL DBsmL
+10.255.0.1        1 Full/-          12.076s            3.922s 10.255.13.1     p-r1:10.255.13.2                     0     0     0
+10.255.0.2        1 Full/-          6.935s             3.064s 10.255.23.1     p-r2:10.255.23.2                     1     0     0
+
+Codes: K - kernel route, C - connected, S - static, R - RIP,
+       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,
+       f - OpenFabric,
+       > - selected route, * - FIB route, q - queued, r - rejected, b - backup
+       t - trapped, o - offload failure
+
+O>* 10.10.0.0/24 [110/60] via 10.255.13.1, p-r1, weight 1, 00:00:02
+O>* 10.20.0.0/24 [110/60] via 10.255.13.1, p-r1, weight 1, 00:00:02
+O>* 10.30.0.0/24 [110/70] via 10.255.13.1, p-r1, weight 1, 00:00:02
+O>* 10.255.12.0/30 [110/60] via 10.255.13.1, p-r1, weight 1, 00:00:02
+O   10.255.13.0/30 [110/50] is directly connected, p-r1, weight 1, 00:00:12
+C>* 10.255.13.0/30 is directly connected, p-r1, 00:00:43
+O   10.255.23.0/30 [110/10] is directly connected, p-r2, weight 1, 00:00:12
+C>* 10.255.23.0/30 is directly connected, p-r2, 00:00:43

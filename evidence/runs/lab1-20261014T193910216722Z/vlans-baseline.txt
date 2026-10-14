@@ -1,0 +1,12 @@
+port              vlan-id  
+p-client          20 PVID Egress Untagged
+p-mgmt            10 PVID Egress Untagged
+p-trunk           10
+                  20
+br0               1 PVID Egress Untagged
+port              vlan-id  
+p-trunk           10
+                  20
+p-gw              10
+                  20
+br0               1 PVID Egress Untagged

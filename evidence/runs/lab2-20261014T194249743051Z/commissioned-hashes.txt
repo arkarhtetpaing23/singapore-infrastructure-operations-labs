@@ -1,0 +1,4 @@
+6bd9f0bc426476a328f55a266c9d9390b958326a583b1a8c25ad6b04314c7f45  /etc/nginx/nginx.conf
+c90449517344ba5c550a9cdb58578afad6b3ce79c0e02af63d3f51e2cd3ce568  /srv/app/data.json
+664 /etc/nginx/nginx.conf
+644 /srv/app/data.json

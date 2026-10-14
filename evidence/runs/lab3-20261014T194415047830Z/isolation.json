@@ -1,0 +1,57 @@
+[
+  {
+    "node": "svc",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab3-415047830z-monitoring",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 67108864,
+    "cap_add": null
+  },
+  {
+    "node": "probe",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab3-415047830z-monitoring",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 67108864,
+    "cap_add": null
+  },
+  {
+    "node": "receiver",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab3-415047830z-monitoring",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 67108864,
+    "cap_add": null
+  },
+  {
+    "node": "prom",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab3-415047830z-monitoring",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 268435456,
+    "cap_add": null
+  },
+  {
+    "node": "am",
+    "safe": true,
+    "privileged": false,
+    "network_mode": "adcn-lab3-415047830z-monitoring",
+    "binds": null,
+    "published_ports": {},
+    "memory_bytes": 134217728,
+    "cap_add": null
+  },
+  {
+    "network": "monitoring",
+    "safe": true,
+    "internal": true
+  }
+]

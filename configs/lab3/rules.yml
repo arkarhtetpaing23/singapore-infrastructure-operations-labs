@@ -1,0 +1,19 @@
+groups:
+  - name: isolated-lab
+    rules:
+      - alert: LabServiceUnavailable
+        expr: lab_probe_success{service="demo"} == 0
+        for: 5s
+        labels:
+          severity: warning
+          environment: lab
+        annotations:
+          summary: Demo service probe failed
+      - alert: LabProbeExporterDown
+        expr: up{job="service-probe"} == 0
+        for: 5s
+        labels:
+          severity: warning
+          environment: lab
+        annotations:
+          summary: Probe exporter scrape failed

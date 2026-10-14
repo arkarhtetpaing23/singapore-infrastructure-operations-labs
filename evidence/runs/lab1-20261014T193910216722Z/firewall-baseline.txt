@@ -1,0 +1,32 @@
+table ip nat { # handle 1
+	chain DOCKER_OUTPUT { # handle 1
+		ip daddr 127.0.0.11 tcp dport 53 counter packets 0 bytes 0  # handle 9
+		ip daddr 127.0.0.11 udp dport 53 counter packets 0 bytes 0  # handle 7
+	}
+
+	chain OUTPUT { # handle 2
+		type nat hook output priority -100; policy accept;
+		ip daddr 127.0.0.11 counter packets 0 bytes 0 jump DOCKER_OUTPUT # handle 3
+	}
+
+	chain DOCKER_POSTROUTING { # handle 4
+		ip saddr 127.0.0.11 tcp sport 43293 counter packets 0 bytes 0  # handle 10
+		ip saddr 127.0.0.11 udp sport 57157 counter packets 0 bytes 0  # handle 8
+	}
+
+	chain POSTROUTING { # handle 5
+		type nat hook postrouting priority srcnat; policy accept;
+		ip daddr 127.0.0.11 counter packets 0 bytes 0 jump DOCKER_POSTROUTING # handle 6
+	}
+}
+table inet lab_policy { # handle 2
+	chain forward { # handle 1
+		type filter hook forward priority filter; policy drop;
+		ct state established,related accept # handle 2
+		ip saddr 10.20.0.0/24 ip daddr 10.30.0.10 tcp dport 22 counter packets 2 bytes 120 reject with tcp reset comment "client-ssh-denied" # handle 3
+		ip saddr 10.10.0.0/24 ip daddr 10.30.0.10 tcp dport 22 counter packets 1 bytes 60 accept comment "management-ssh-allowed" # handle 4
+		ip saddr { 10.10.0.0/24, 10.20.0.0/24 } ip daddr 10.30.0.10 tcp dport 80 counter packets 3 bytes 180 accept comment "service-http-allowed" # handle 6
+		ip protocol icmp counter packets 0 bytes 0 accept comment "lab-diagnostics" # handle 7
+		counter packets 0 bytes 0 drop comment "unapproved-forwarding" # handle 8
+	}
+}

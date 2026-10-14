@@ -1,0 +1,31 @@
+{
+  "status": "success",
+  "data": {
+    "activeTargets": [
+      {
+        "discoveredLabels": {
+          "__address__": "probe:8080",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "1s",
+          "__scrape_timeout__": "800ms",
+          "job": "service-probe"
+        },
+        "labels": {
+          "instance": "probe:8080",
+          "job": "service-probe"
+        },
+        "scrapePool": "service-probe",
+        "scrapeUrl": "http://probe:8080/metrics",
+        "globalUrl": "http://probe:8080/metrics",
+        "lastError": "",
+        "lastScrape": "2026-10-14T19:44:22.714089404Z",
+        "lastScrapeDuration": 0.007563149,
+        "health": "up",
+        "scrapeInterval": "1s",
+        "scrapeTimeout": "800ms"
+      }
+    ],
+    "droppedTargets": []
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "verified_runs": [
+    {
+      "lab": "lab1",
+      "run": "lab1-20261014T193910216722Z",
+      "actor": "assistant",
+      "started_utc": "2026-10-14T19:39:10.216927+00:00",
+      "ended_utc": "2026-10-14T19:40:13.694683+00:00",
+      "checks": 26,
+      "status": "passed",
+      "cleanup_verified": true,
+      "relevant_source_hashes_match": true,
+      "image_id": "sha256:871d0b1b187dbdc53ec6f4918c97c6dc3c35d20edc3cd2f2f4d812537fd560d6",
+      "candidate_validation": "pending"
+    },
+    {
+      "lab": "lab2",
+      "run": "lab2-20261014T194249743051Z",
+      "actor": "assistant",
+      "started_utc": "2026-10-14T19:42:49.743143+00:00",
+      "ended_utc": "2026-10-14T19:42:59.516846+00:00",
+      "checks": 15,
+      "status": "passed",
+      "cleanup_verified": true,
+      "relevant_source_hashes_match": true,
+      "image_id": "sha256:871d0b1b187dbdc53ec6f4918c97c6dc3c35d20edc3cd2f2f4d812537fd560d6",
+      "candidate_validation": "pending"
+    },
+    {
+      "lab": "lab3",
+      "run": "lab3-20261014T194415047830Z",
+      "actor": "assistant",
+      "started_utc": "2026-10-14T19:44:15.048023+00:00",
+      "ended_utc": "2026-10-14T19:44:59.247362+00:00",
+      "checks": 11,
+      "status": "passed",
+      "cleanup_verified": true,
+      "relevant_source_hashes_match": true,
+      "image_id": "sha256:871d0b1b187dbdc53ec6f4918c97c6dc3c35d20edc3cd2f2f4d812537fd560d6",
+      "candidate_validation": "pending"
+    }
+  ],
+  "recorded_check_count": 52,
+  "failed_implementation_runs": [
+    {
+      "run": "lab1-20261014T192501112860Z",
+      "lab": "lab1",
+      "classification": "Docker network-mode restriction",
+      "checks_completed": 0,
+      "raw_evidence": "Retained locally; excluded from Git staging"
+    },
+    {
+      "run": "lab1-20261014T192539198172Z",
+      "lab": "lab1",
+      "classification": "Read-only runtime sysctl",
+      "checks_completed": 0,
+      "raw_evidence": "Retained locally; excluded from Git staging"
+    },
+    {
+      "run": "lab1-20261014T192855311917Z",
+      "lab": "lab1",
+      "classification": "Unsupported daemon flag",
+      "checks_completed": 8,
+      "raw_evidence": "Retained locally; excluded from Git staging"
+    },
+    {
+      "run": "lab1-20261014T193028997458Z",
+      "lab": "lab1",
+      "classification": "FRR startup capability requirement",
+      "checks_completed": 8,
+      "raw_evidence": "Retained locally; excluded from Git staging"
+    },
+    {
+      "run": "lab1-20261014T193121227440Z",
+      "lab": "lab1",
+      "classification": "Runtime-directory ownership",
+      "checks_completed": 8,
+      "raw_evidence": "Retained locally; excluded from Git staging"
+    },
+    {
+      "run": "lab1-20261014T193345715217Z",
+      "lab": "lab1",
+      "classification": "Sticky-directory log reopening",
+      "checks_completed": 16,
+      "raw_evidence": "Retained locally; excluded from Git staging"
+    },
+    {
+      "run": "lab1-20261014T193503155165Z",
+      "lab": "lab1",
+      "classification": "Capture display/filter verification",
+      "checks_completed": 24,
+      "raw_evidence": "Retained locally; excluded from Git staging"
+    },
+    {
+      "run": "lab2-20261014T194122887998Z",
+      "lab": "lab2",
+      "classification": "Stopped container Docker DNS behavior",
+      "checks_completed": 4,
+      "raw_evidence": "Retained locally; excluded from Git staging"
+    }
+  ],
+  "limitations": [
+    "Assistant execution only; candidate practice/understanding pending",
+    "Packet Tracer execution pending",
+    "No physical hardware or production experience",
+    "Local only; GitHub publication pending"
+  ]
+}

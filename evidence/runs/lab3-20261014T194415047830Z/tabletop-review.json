@@ -1,0 +1,12 @@
+{
+  "classification": "Fictional documentation/tabletop fixture; no physical installation or measurement",
+  "rack_collisions": [],
+  "endpoint_mismatches": {
+    "asset": {
+      "approved": "SW01",
+      "observed_fixture": "SW02"
+    }
+  },
+  "decision": "Stop work and escalate endpoint conflict; do not patch SW02 against a SW01 work order",
+  "physical_testing_performed": false
+}

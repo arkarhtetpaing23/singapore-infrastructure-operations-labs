@@ -1,0 +1,360 @@
+[
+  {
+    "name": "Alert rule duration/recovery/missing-metric unit cases",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:16.971334+00:00",
+    "detail": "Checking /etc/prometheus/lab.yml\n  SUCCESS: 1 rule files found\n SUCCESS: /etc/prometheus/lab.yml is valid prometheus config file syntax\n\nChecking /etc/prometheus/lab-rules.yml\n  SUCCESS: 2 rules found\n\nUnit Testing:  /etc/prometheus/rule-tests.yml\n  SUCCESS\n\n"
+  },
+  {
+    "name": "Healthy exporter and actual application probe",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:23.108188+00:00",
+    "detail": {
+      "up": 1,
+      "probe_success": 1
+    }
+  },
+  {
+    "name": "Actual outage enters pending while exporter still scrapes",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:26.367047+00:00",
+    "detail": {
+      "status": "success",
+      "data": {
+        "alerts": [
+          {
+            "labels": {
+              "alertname": "LabServiceUnavailable",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "service": "demo",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Demo service probe failed"
+            },
+            "state": "pending",
+            "activeAt": "2026-10-14T19:44:25.712015814Z",
+            "value": "0e+00"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Prometheus service alert delivered through actual Alertmanager",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:32.064107+00:00",
+    "detail": {
+      "received_utc": "2026-10-14T19:44:31.730143+00:00",
+      "payload": {
+        "receiver": "lab-local",
+        "status": "firing",
+        "alerts": [
+          {
+            "status": "firing",
+            "labels": {
+              "alertname": "LabServiceUnavailable",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "service": "demo",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Demo service probe failed"
+            },
+            "startsAt": "2026-10-14T19:44:30.712Z",
+            "endsAt": "0001-01-01T00:00:00Z",
+            "generatorURL": "http://prom:9090/graph?g0.expr=lab_probe_success%7Bservice%3D%22demo%22%7D+%3D%3D+0&g0.tab=1",
+            "fingerprint": "ca3ea1429f03a34d"
+          }
+        ],
+        "groupLabels": {
+          "alertname": "LabServiceUnavailable"
+        },
+        "commonLabels": {
+          "alertname": "LabServiceUnavailable",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "service": "demo",
+          "severity": "warning"
+        },
+        "commonAnnotations": {
+          "summary": "Demo service probe failed"
+        },
+        "externalURL": "http://am:9093",
+        "version": "4",
+        "groupKey": "{}:{alertname=\"LabServiceUnavailable\"}",
+        "truncatedAlerts": 0
+      }
+    }
+  },
+  {
+    "name": "Service recovery produces actual resolved delivery",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:34.376982+00:00",
+    "detail": {
+      "received_utc": "2026-10-14T19:44:33.725587+00:00",
+      "payload": {
+        "receiver": "lab-local",
+        "status": "resolved",
+        "alerts": [
+          {
+            "status": "resolved",
+            "labels": {
+              "alertname": "LabServiceUnavailable",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "service": "demo",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Demo service probe failed"
+            },
+            "startsAt": "2026-10-14T19:44:30.712Z",
+            "endsAt": "2026-10-14T19:44:33.712Z",
+            "generatorURL": "http://prom:9090/graph?g0.expr=lab_probe_success%7Bservice%3D%22demo%22%7D+%3D%3D+0&g0.tab=1",
+            "fingerprint": "ca3ea1429f03a34d"
+          }
+        ],
+        "groupLabels": {
+          "alertname": "LabServiceUnavailable"
+        },
+        "commonLabels": {
+          "alertname": "LabServiceUnavailable",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "service": "demo",
+          "severity": "warning"
+        },
+        "commonAnnotations": {
+          "summary": "Demo service probe failed"
+        },
+        "externalURL": "http://am:9093",
+        "version": "4",
+        "groupKey": "{}:{alertname=\"LabServiceUnavailable\"}",
+        "truncatedAlerts": 0
+      }
+    }
+  },
+  {
+    "name": "Exporter failure distinguished from application outage",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:43.083410+00:00",
+    "detail": {
+      "received_utc": "2026-10-14T19:44:42.716352+00:00",
+      "payload": {
+        "receiver": "lab-local",
+        "status": "firing",
+        "alerts": [
+          {
+            "status": "firing",
+            "labels": {
+              "alertname": "LabProbeExporterDown",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Probe exporter scrape failed"
+            },
+            "startsAt": "2026-10-14T19:44:41.712Z",
+            "endsAt": "0001-01-01T00:00:00Z",
+            "generatorURL": "http://prom:9090/graph?g0.expr=up%7Bjob%3D%22service-probe%22%7D+%3D%3D+0&g0.tab=1",
+            "fingerprint": "31b56e7596ee7da1"
+          }
+        ],
+        "groupLabels": {
+          "alertname": "LabProbeExporterDown"
+        },
+        "commonLabels": {
+          "alertname": "LabProbeExporterDown",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "severity": "warning"
+        },
+        "commonAnnotations": {
+          "summary": "Probe exporter scrape failed"
+        },
+        "externalURL": "http://am:9093",
+        "version": "4",
+        "groupKey": "{}:{alertname=\"LabProbeExporterDown\"}",
+        "truncatedAlerts": 0
+      }
+    }
+  },
+  {
+    "name": "Exporter recovery produces resolved delivery",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:45.356944+00:00",
+    "detail": {
+      "received_utc": "2026-10-14T19:44:44.717578+00:00",
+      "payload": {
+        "receiver": "lab-local",
+        "status": "resolved",
+        "alerts": [
+          {
+            "status": "resolved",
+            "labels": {
+              "alertname": "LabProbeExporterDown",
+              "environment": "lab",
+              "instance": "probe:8080",
+              "job": "service-probe",
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Probe exporter scrape failed"
+            },
+            "startsAt": "2026-10-14T19:44:41.712Z",
+            "endsAt": "2026-10-14T19:44:44.712Z",
+            "generatorURL": "http://prom:9090/graph?g0.expr=up%7Bjob%3D%22service-probe%22%7D+%3D%3D+0&g0.tab=1",
+            "fingerprint": "31b56e7596ee7da1"
+          }
+        ],
+        "groupLabels": {
+          "alertname": "LabProbeExporterDown"
+        },
+        "commonLabels": {
+          "alertname": "LabProbeExporterDown",
+          "environment": "lab",
+          "instance": "probe:8080",
+          "job": "service-probe",
+          "severity": "warning"
+        },
+        "commonAnnotations": {
+          "summary": "Probe exporter scrape failed"
+        },
+        "externalURL": "http://am:9093",
+        "version": "4",
+        "groupKey": "{}:{alertname=\"LabProbeExporterDown\"}",
+        "truncatedAlerts": 0
+      }
+    }
+  },
+  {
+    "name": "Maintenance silence suppresses notification, not alert evaluation",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:56.256217+00:00",
+    "detail": {
+      "annotations": {
+        "summary": "Demo service probe failed"
+      },
+      "endsAt": "2026-10-14T19:48:53.712Z",
+      "fingerprint": "ca3ea1429f03a34d",
+      "receivers": [
+        {
+          "name": "lab-local"
+        }
+      ],
+      "startsAt": "2026-10-14T19:44:53.712Z",
+      "status": {
+        "inhibitedBy": [],
+        "silencedBy": [
+          "3a40b1d8-c285-450a-bfd3-2ae2177acfb4"
+        ],
+        "state": "suppressed"
+      },
+      "updatedAt": "2026-10-14T19:44:53.714Z",
+      "generatorURL": "http://prom:9090/graph?g0.expr=lab_probe_success%7Bservice%3D%22demo%22%7D+%3D%3D+0&g0.tab=1",
+      "labels": {
+        "alertname": "LabServiceUnavailable",
+        "environment": "lab",
+        "instance": "probe:8080",
+        "job": "service-probe",
+        "service": "demo",
+        "severity": "warning"
+      }
+    }
+  },
+  {
+    "name": "Maintenance ends with service and monitoring healthy",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:58.585291+00:00",
+    "detail": {
+      "status": "success",
+      "data": {
+        "alerts": []
+      }
+    }
+  },
+  {
+    "name": "Fictional rack placement consistent and cross-connect endpoint conflict detected",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:58.956541+00:00",
+    "detail": {
+      "asset": {
+        "approved": "SW01",
+        "observed_fixture": "SW02"
+      }
+    }
+  },
+  {
+    "name": "Runtime isolation and resource limits",
+    "passed": true,
+    "observed_utc": "2026-10-14T19:44:59.247087+00:00",
+    "detail": [
+      {
+        "node": "svc",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab3-415047830z-monitoring",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 67108864,
+        "cap_add": null
+      },
+      {
+        "node": "probe",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab3-415047830z-monitoring",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 67108864,
+        "cap_add": null
+      },
+      {
+        "node": "receiver",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab3-415047830z-monitoring",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 67108864,
+        "cap_add": null
+      },
+      {
+        "node": "prom",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab3-415047830z-monitoring",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 268435456,
+        "cap_add": null
+      },
+      {
+        "node": "am",
+        "safe": true,
+        "privileged": false,
+        "network_mode": "adcn-lab3-415047830z-monitoring",
+        "binds": null,
+        "published_ports": {},
+        "memory_bytes": 134217728,
+        "cap_add": null
+      },
+      {
+        "network": "monitoring",
+        "safe": true,
+        "internal": true
+      }
+    ]
+  }
+]

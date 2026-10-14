@@ -1,0 +1,13 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  6 19:42 ?        00:00:00 python3 -u /lab/service_supervisor.py
+root           7       1  5 19:42 ?        00:00:00 python3 -u /lab/service_backend.py
+root           8       1  0 19:42 ?        00:00:00 nginx: master process nginx -g daemon off;
+www-data       9       8  0 19:42 ?        00:00:00 nginx: worker process
+root          18       0 25 19:42 ?        00:00:00 sh -eu -c ps -ef; ss -lntp; nginx -t; df -h /srv/pressure
+root          24      18  0 19:42 ?        00:00:00 ps -ef
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                        
+LISTEN 0      5          127.0.0.1:8080       0.0.0.0:*    users:(("python3",pid=7,fd=3))
+LISTEN 0      4096      127.0.0.11:36471      0.0.0.0:*                                  
+LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=8,fd=5))  
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           8.0M     0  8.0M   0% /srv/pressure

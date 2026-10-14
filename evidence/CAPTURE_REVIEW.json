@@ -1,0 +1,43 @@
+{
+  "scope": "Endpoint/DNS field review of selected successful captures; not a universal privacy certification",
+  "captures": [
+    {
+      "file": "vlan.pcap",
+      "packets_parsed": 425,
+      "vlan_ids": [
+        "10",
+        "20"
+      ],
+      "ip_endpoints": [
+        "0.0.0.0",
+        "10.10.0.1",
+        "10.10.0.50",
+        "10.20.0.1",
+        "10.20.0.50",
+        "10.30.0.10",
+        "10.30.0.99",
+        "255.255.255.255"
+      ],
+      "dns_names": [
+        "app.lab"
+      ],
+      "non_lab_endpoint_or_dns_name": false,
+      "decoder_warning": "Optional host falco plugin loading warning; packet fields still parsed with exit status 0"
+    },
+    {
+      "file": "ospf.pcap",
+      "packets_parsed": 158,
+      "vlan_ids": [],
+      "ip_endpoints": [
+        "10.20.0.50",
+        "10.255.12.1",
+        "10.255.12.2",
+        "10.30.0.10",
+        "224.0.0.5"
+      ],
+      "dns_names": [],
+      "non_lab_endpoint_or_dns_name": false,
+      "decoder_warning": "Optional host falco plugin loading warning; packet fields still parsed with exit status 0"
+    }
+  ]
+}

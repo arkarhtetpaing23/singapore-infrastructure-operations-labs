@@ -1,0 +1,58 @@
+2026/10/14 19:42:52 [notice] 9#9: exit
+2026/10/14 19:42:52 [notice] 8#8: signal 17 (SIGCHLD) received from 9
+2026/10/14 19:42:52 [notice] 8#8: worker process 9 exited with code 0
+2026/10/14 19:42:52 [notice] 8#8: exit
+2026/10/14 19:42:55 [notice] 8#8: using the "epoll" event method
+2026/10/14 19:42:55 [notice] 8#8: nginx/1.22.1
+2026/10/14 19:42:55 [notice] 8#8: OS: Linux 7.1.5+kali-amd64
+2026/10/14 19:42:55 [notice] 8#8: getrlimit(RLIMIT_NOFILE): 1024:524288
+2026/10/14 19:42:55 [notice] 8#8: start worker processes
+2026/10/14 19:42:55 [notice] 8#8: start worker process 9
+2026/10/14 19:42:55 [info] 9#9: *1 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:55 [info] 9#9: *2 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:55 [info] 9#9: *4 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:56 [error] 9#9: *5 open() "/srv/app/data.json" failed (13: Permission denied), client: 172.18.0.3, server: , request: "GET /data.json HTTP/1.1", host: "app"
+2026/10/14 19:42:56 [info] 9#9: *5 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:56 [info] 9#9: *6 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:56 [info] 9#9: *7 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:56 [info] 9#9: *8 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:57 [info] 9#9: *10 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:57 [info] 9#9: *12 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:57 [info] 9#9: *14 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:58 [notice] 8#8: signal 1 (SIGHUP) received from 79, reconfiguring
+2026/10/14 19:42:58 [notice] 8#8: reconfiguring
+2026/10/14 19:42:58 [notice] 8#8: using the "epoll" event method
+2026/10/14 19:42:58 [notice] 8#8: start worker processes
+2026/10/14 19:42:58 [notice] 8#8: start worker process 80
+2026/10/14 19:42:58 [notice] 9#9: gracefully shutting down
+2026/10/14 19:42:58 [notice] 9#9: exiting
+2026/10/14 19:42:58 [notice] 9#9: exit
+2026/10/14 19:42:58 [notice] 8#8: signal 17 (SIGCHLD) received from 9
+2026/10/14 19:42:58 [notice] 8#8: worker process 9 exited with code 0
+2026/10/14 19:42:58 [notice] 8#8: signal 29 (SIGIO) received
+2026/10/14 19:42:58 [info] 80#80: *15 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:59 [info] 80#80: *16 client 172.18.0.3 closed keepalive connection
+2026/10/14 19:42:59 [info] 80#80: *18 client 172.18.0.3 closed keepalive connection
+172.18.0.3 - - [14/Oct/2026:19:42:50 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:50 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:50 +0000] "GET /health HTTP/1.1" 200 51 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:50 +0000] "POST /events HTTP/1.1" 201 16 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:51 +0000] "POST /events HTTP/1.1" 201 16 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:51 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:52 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:52 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:52 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:52 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:55 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:55 +0000] "GET /health HTTP/1.1" 200 51 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:55 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:56 +0000] "GET /data.json HTTP/1.1" 403 153 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:56 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:56 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:56 +0000] "POST /events HTTP/1.1" 507 46 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:57 +0000] "GET /health HTTP/1.1" 200 51 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:57 +0000] "POST /events HTTP/1.1" 201 16 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:57 +0000] "GET /data.json HTTP/1.1" 200 45 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:58 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:59 +0000] "POST /events HTTP/1.1" 201 16 "-" "curl/7.88.1"
+172.18.0.3 - - [14/Oct/2026:19:42:59 +0000] "GET /data.json HTTP/1.1" 200 80 "-" "curl/7.88.1"

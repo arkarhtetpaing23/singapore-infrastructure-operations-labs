@@ -1,0 +1,2 @@
+2026/10/14 19:42:52 [emerg] 38#38: unknown directive "this_directive_does_not_exist" in /etc/nginx/nginx.conf:17
+nginx: configuration file /etc/nginx/nginx.conf test failed

@@ -1,0 +1,11 @@
+dnsmasq	2.90-4~deb12u2
+frr	8.4.4-1.1~deb12u2
+iproute2	6.1.0-3
+isc-dhcp-client	4.4.3-P1-2
+nftables	1.0.6-2+deb12u2
+nginx	1.22.1-9+deb12u10
+prometheus	2.42.0+ds-5+deb12u1
+prometheus-alertmanager	0.25.0-1+b4
+python3	3.11.2-1+b1
+tcpdump	4.99.3-1
+7.1.5+kali-amd64

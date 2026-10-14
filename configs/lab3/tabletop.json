@@ -1,0 +1,11 @@
+{
+  "classification": "Fictional documentation/tabletop fixture; no physical installation or measurement",
+  "rack": {"id":"RACK-A01","height_u":42},
+  "assets": [
+    {"id":"SW01","rack":"RACK-A01","start_u":40,"height_u":2},
+    {"id":"SRV01","rack":"RACK-A01","start_u":10,"height_u":1}
+  ],
+  "approved_cross_connect": {"ticket":"LAB-WO-003","asset":"SW01","port":"Ethernet1/49","panel":"PP-A01","panel_port":"01","media":"OM4 duplex LC","optic":"10GBASE-SR at both ends"},
+  "observed_label_fixture": {"asset":"SW02","port":"Ethernet1/49","panel":"PP-A01","panel_port":"01","media":"OM4 duplex LC","optic":"10GBASE-SR at both ends"},
+  "fictional_power_record": {"asset":"SRV01","psu_a":"PDU-A01/A05","psu_b":"PDU-B01/B05","limitation":"Two PDU labels alone do not verify independent upstream feeds or measured redundancy."}
+}

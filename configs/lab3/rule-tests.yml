@@ -1,0 +1,47 @@
+rule_files:
+  - /etc/prometheus/lab-rules.yml
+evaluation_interval: 1s
+tests:
+  - interval: 1s
+    input_series:
+      - series: 'lab_probe_success{service="demo"}'
+        values: '1 0x9 1x9'
+      - series: 'up{job="service-probe",instance="probe:8080"}'
+        values: '1x20'
+    alert_rule_test:
+      - eval_time: 5s
+        alertname: LabServiceUnavailable
+        exp_alerts: []
+      - eval_time: 6s
+        alertname: LabServiceUnavailable
+        exp_alerts:
+          - exp_labels:
+              service: demo
+              severity: warning
+              environment: lab
+            exp_annotations:
+              summary: Demo service probe failed
+      - eval_time: 12s
+        alertname: LabServiceUnavailable
+        exp_alerts: []
+      - eval_time: 6s
+        alertname: LabProbeExporterDown
+        exp_alerts: []
+  - interval: 1s
+    input_series:
+      - series: 'up{job="service-probe",instance="probe:8080"}'
+        values: '0x10'
+    alert_rule_test:
+      - eval_time: 6s
+        alertname: LabServiceUnavailable
+        exp_alerts: []
+      - eval_time: 6s
+        alertname: LabProbeExporterDown
+        exp_alerts:
+          - exp_labels:
+              job: service-probe
+              instance: probe:8080
+              severity: warning
+              environment: lab
+            exp_annotations:
+              summary: Probe exporter scrape failed

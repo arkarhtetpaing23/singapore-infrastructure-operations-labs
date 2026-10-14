@@ -1,0 +1,5 @@
+{
+  "code": 200,
+  "body": "{\"asset\": \"fictional-app-01\", \"version\": 1, \"message\": \"verified service data\"}\n",
+  "stderr": ""
+}

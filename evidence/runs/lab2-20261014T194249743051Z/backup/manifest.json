@@ -1,0 +1,9 @@
+{
+  "sha256": "b675dd3bb7cb5838b0c9386ba9f1710dbe799334e211e0f6cbab4e26b3a27763",
+  "files": [
+    "etc/nginx/nginx.conf",
+    "srv/app/data.json"
+  ],
+  "excluded": "ephemeral tmpfs events journal; operating-system image; private keys",
+  "source_files": "6bd9f0bc426476a328f55a266c9d9390b958326a583b1a8c25ad6b04314c7f45  /etc/nginx/nginx.conf\nc90449517344ba5c550a9cdb58578afad6b3ce79c0e02af63d3f51e2cd3ce568  /srv/app/data.json\n664 /etc/nginx/nginx.conf\n644 /srv/app/data.json\n"
+}

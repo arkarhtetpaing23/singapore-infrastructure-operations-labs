@@ -1,0 +1,5 @@
+19:39:23.923099 56:40:ba:53:e6:34 > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 346: vlan 20, p 0, ethertype IPv4 (0x0800), 0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from 56:40:ba:53:e6:34, length 300
+19:39:23.923621 9a:97:09:bb:88:8a > 56:40:ba:53:e6:34, ethertype 802.1Q (0x8100), length 346: vlan 20, p 0, ethertype IPv4 (0x0800), 10.20.0.1.67 > 10.20.0.50.68: BOOTP/DHCP, Reply, length 300
+19:39:23.923730 56:40:ba:53:e6:34 > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 346: vlan 20, p 0, ethertype IPv4 (0x0800), 0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from 56:40:ba:53:e6:34, length 300
+19:39:23.925212 9a:97:09:bb:88:8a > 56:40:ba:53:e6:34, ethertype 802.1Q (0x8100), length 346: vlan 20, p 0, ethertype IPv4 (0x0800), 10.20.0.1.67 > 10.20.0.50.68: BOOTP/DHCP, Reply, length 300
+19:39:24.516194 56:40:ba:53:e6:34 > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 46: vlan 20, p 0, ethertype ARP (0x0806), Request who-has 10.20.0.1 tell 10.20.0.50, length 28

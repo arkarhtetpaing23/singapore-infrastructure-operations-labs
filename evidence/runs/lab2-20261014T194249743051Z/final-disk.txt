@@ -1,0 +1,4 @@
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           8.0M  4.0K  8.0M   1% /srv/pressure
+Filesystem     Inodes IUsed  IFree IUse% Mounted on
+tmpfs          864583     2 864581    1% /srv/pressure

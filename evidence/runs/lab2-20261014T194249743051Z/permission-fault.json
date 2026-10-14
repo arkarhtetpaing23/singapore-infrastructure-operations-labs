@@ -1,0 +1,8 @@
+{
+  "response": {
+    "code": 403,
+    "body": "<html>\n<head><title>403 Forbidden</title></head>\n<body>\n<center><h1>403 Forbidden</h1></center>\n<hr><center>nginx/1.22.1</center>\n</body>\n</html>\n",
+    "stderr": ""
+  },
+  "diagnostics": "2026/10/14 19:42:52 [notice] 8#8: exit\n2026/10/14 19:42:55 [notice] 8#8: using the \"epoll\" event method\n2026/10/14 19:42:55 [notice] 8#8: nginx/1.22.1\n2026/10/14 19:42:55 [notice] 8#8: OS: Linux 7.1.5+kali-amd64\n2026/10/14 19:42:55 [notice] 8#8: getrlimit(RLIMIT_NOFILE): 1024:524288\n2026/10/14 19:42:55 [notice] 8#8: start worker processes\n2026/10/14 19:42:55 [notice] 8#8: start worker process 9\n2026/10/14 19:42:55 [info] 9#9: *1 client 172.18.0.3 closed keepalive connection\n2026/10/14 19:42:55 [info] 9#9: *2 client 172.18.0.3 closed keepalive connection\n2026/10/14 19:42:55 [info] 9#9: *4 client 172.18.0.3 closed keepalive connection\n2026/10/14 19:42:56 [error] 9#9: *5 open() \"/srv/app/data.json\" failed (13: Permission denied), client: 172.18.0.3, server: , request: \"GET /data.json HTTP/1.1\", host: \"app\"\n2026/10/14 19:42:56 [info] 9#9: *5 client 172.18.0.3 closed keepalive connection\n0 /srv/app/data.json\n"
+}

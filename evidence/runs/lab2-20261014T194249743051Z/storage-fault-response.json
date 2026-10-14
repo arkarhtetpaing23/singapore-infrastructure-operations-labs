@@ -1,0 +1,5 @@
+{
+  "code": 507,
+  "body": "{\"error\": \"journal write failed\", \"errno\": 28}",
+  "stderr": ""
+}

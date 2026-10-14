@@ -1,0 +1,8 @@
+dd: error writing '/srv/pressure/fill': No space left on device
+9+0 records in
+8+0 records out
+8388608 bytes (8.4 MB, 8.0 MiB) copied, 0.00533175 s, 1.6 GB/s
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           8.0M  8.0M     0 100% /srv/pressure
+Filesystem     Inodes IUsed  IFree IUse% Mounted on
+tmpfs          864583     2 864581    1% /srv/pressure
