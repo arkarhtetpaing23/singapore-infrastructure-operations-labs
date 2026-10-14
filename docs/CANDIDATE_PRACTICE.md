@@ -4,6 +4,8 @@ Current status: candidate execution and understanding have not been verified for
 
 ## Start with one project
 
+First read the [network foundations lesson](FIRST_PRACTICE_LESSON.md). It explains the implemented packet path, subnet/VLAN/DHCP/DNS/OSPF relationships and what each diagnostic command can prove.
+
 Open a terminal in this project folder. Inspect `Dockerfile`, `scripts/labctl.py`, `scripts/labcore.py` and the relevant lab script. A Docker-capable account is required. The normal run automatically removes its own lab resources and preserves evidence. A retained run stays available for the manual commands below.
 
 ```sh

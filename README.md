@@ -12,7 +12,7 @@ The three projects are network commissioning/fault isolation, Linux service reco
 | [Service recovery](labs/02-service-recovery/README.md) | Configuration/startup failure, permissions, ENOSPC and clean-target restore | Backup manifest, actual client responses and recovery checks |
 | [Monitoring operations](labs/03-monitoring-operations/README.md) | Prometheus/Alertmanager firing/resolved deliveries, exporter failure, silence and fictional work-order review | Actual incident chronology and local delivery journal |
 
-Start personal development with the [practice guide](docs/CANDIDATE_PRACTICE.md). Read [contribution boundaries](docs/CONTRIBUTION.md), [operations discipline](docs/OPERATIONS.md), [verification review](docs/OBJECTIVE_1_REVIEW.md) and [Packet Tracer exercise](docs/PACKET_TRACER_EXERCISE.md). These projects support learning; they do not establish professional employment, physical hardware competence or unaided candidate mastery.
+Start personal development with the [network foundations lesson](docs/FIRST_PRACTICE_LESSON.md) and [practice guide](docs/CANDIDATE_PRACTICE.md). Read [contribution boundaries](docs/CONTRIBUTION.md), [operations discipline](docs/OPERATIONS.md), [verification review](docs/OBJECTIVE_1_REVIEW.md) and [Packet Tracer exercise](docs/PACKET_TRACER_EXERCISE.md). These projects support learning; they do not establish professional employment, physical hardware competence or unaided candidate mastery.
 
 ## Execution scope
 
